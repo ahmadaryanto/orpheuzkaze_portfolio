@@ -1,0 +1,10 @@
+# Local scrape backup (contains old source data)
+scraped/
+
+# Large original event images (site uses optimized JPGs)
+assets/pdf-pages/*.png
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
