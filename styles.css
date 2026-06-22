@@ -584,13 +584,15 @@ h3 {
   flex: 0 0 auto;
 }
 
-.social-icon-linkedin {
+.social-icon-telegram,
+.social-icon-email {
   width: 16px;
   height: 16px;
   color: var(--text);
 }
 
-.social-icon-linkedin svg {
+.social-icon-telegram svg,
+.social-icon-email svg {
   display: block;
   width: 100%;
   height: 100%;
