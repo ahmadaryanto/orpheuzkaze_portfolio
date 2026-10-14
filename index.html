@@ -1,750 +1,841 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orpheuzkaze Portfolio</title>
+    <title>Orpheuzkaze: Web3 Growth, Community &amp; AI Creative</title>
     <meta
       name="description"
-      content="Professional portfolio of Orpheuzkaze — Web3 growth, community, and partnership specialist, currently open to freelance work."
+      content="Portfolio of Orpheuzkaze. Web3 growth, community, and partnerships specialist with an AI creative edge. 1.03M+ social reach built, 850+ collaborations, open to freelance."
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Orpheuzkaze" />
+    <meta name="theme-color" content="#08080a" />
     <link rel="canonical" href="https://orpheuzkaze-portfolio.vercel.app/" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Orpheuzkaze Portfolio" />
-    <meta property="og:title" content="Orpheuzkaze Portfolio" />
+    <meta property="og:title" content="Orpheuzkaze: Web3 Growth, Community &amp; AI Creative" />
     <meta
       property="og:description"
-      content="Professional portfolio of Orpheuzkaze — Web3 growth, community, and partnership specialist, currently open to freelance work."
+      content="Web3 growth, community, and partnerships specialist with an AI creative edge. Open to freelance."
     />
     <meta property="og:url" content="https://orpheuzkaze-portfolio.vercel.app/" />
     <meta property="og:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
     <meta property="og:image:alt" content="Orpheuzkaze profile picture" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Orpheuzkaze Portfolio" />
+    <meta name="twitter:site" content="@orpheuskaze" />
+    <meta name="twitter:title" content="Orpheuzkaze: Web3 Growth, Community &amp; AI Creative" />
     <meta
       name="twitter:description"
-      content="Professional portfolio of Orpheuzkaze — Web3 growth, community, and partnership specialist, currently open to freelance work."
+      content="Web3 growth, community, and partnerships specialist with an AI creative edge. Open to freelance."
     />
     <meta name="twitter:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260622" />
-    <link rel="stylesheet" href="./enhancements.css?v=20260622" />
+    <link rel="stylesheet" href="./portfolio.css?v=20261014" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="ambient" aria-hidden="true">
-      <div class="ambient__orb ambient__orb--1"></div>
-      <div class="ambient__orb ambient__orb--2"></div>
-      <div class="ambient__orb ambient__orb--3"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__noise"></div>
     </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#top">ORPHEUZKAZE</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav">
-          <a href="#profile">Profile</a>
-          <a href="#freelance">Current Work</a>
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="logo" href="#top" aria-label="Orpheuzkaze, back to top">
+          <span class="logo__mark">O</span>
+          <span class="logo__text">ORPHEUZKAZE</span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#x-profile">X</a>
+          <a href="#lab">AI Lab</a>
           <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#kpis">Results</a>
-          <a href="#contact">Contact</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact" class="nav__cta">Let's talk</a>
         </nav>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-media">
-            <div class="image-shell">
-              <div class="profile-fallback" aria-hidden="true">
-                <span class="profile-fallback__initials">ORP</span>
-                <span class="profile-fallback__label">Profile image unavailable</span>
-              </div>
-              <img
-                src="./assets/profile-picture.webp"
-                alt="Orpheuzkaze profile picture"
-              />
+    <main id="main">
+      <!-- ============ 01 · HERO ============ -->
+      <section class="hero" id="top">
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <p class="status" data-reveal>
+              <span class="status__dot"></span>
+              Portfolio 2026 · Open to freelance
+            </p>
+            <h1 class="hero__title" data-reveal>
+              <span class="hero__line">Growth, community</span>
+              <span class="hero__line">&amp; partnerships</span>
+              <span class="hero__line hero__line--serif">for <em>Web3</em> &amp; <em>AI</em>.</span>
+            </h1>
+            <p class="hero__lead" data-reveal>
+              I'm <strong>Orpheuzkaze</strong>. I help Web3 projects go from first attention to
+              lasting community traction through growth, moderation, partnerships, and
+              AI-assisted creative work.
+            </p>
+
+            <ul class="chips" data-reveal aria-label="Roles">
+              <li>Growth Manager</li>
+              <li>Community Manager</li>
+              <li>Moderator Lead</li>
+              <li>Partnership Operator</li>
+              <li class="chips__hl">Currently Freelance</li>
+            </ul>
+
+            <div class="hero__actions" data-reveal>
+              <a class="btn btn--primary" href="#contact">
+                Start a project
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="#experience">View experience</a>
             </div>
           </div>
 
-          <div class="hero-copy">
-            <p class="eyebrow">Portfolio 2026 · Open to freelance</p>
-            <h1><span class="text-gradient">ORPHEUZKAZE</span></h1>
-            <p class="hero-text">
-              I support Web3 projects across growth, community, moderation, and
-              partnerships — currently through both ongoing freelance engagements
-              and selected project roles.
-            </p>
-
-            <div class="role-grid">
-              <article class="role-card">
-                <span>Growth</span>
-                <strong>Manager</strong>
-              </article>
-              <article class="role-card">
-                <span>Community</span>
-                <strong>Manager</strong>
-              </article>
-              <article class="role-card">
-                <span>Moderator</span>
-                <strong>Lead</strong>
-              </article>
-              <article class="role-card">
-                <span>Partnership</span>
-                <strong>Operator</strong>
-              </article>
-              <article class="role-card role-card--highlight">
-                <span>Currently</span>
-                <strong>Freelance</strong>
-              </article>
-            </div>
-
-            <div class="contact-row contact-row--hero">
-              <a href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer" class="social-link">
-                <span class="social-icon social-icon-telegram" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path>
-                  </svg>
-                </span>
-                <span>@orpheuzkaze</span>
-              </a>
-              <a href="mailto:orpheuzkaze@gmail.com" class="social-link">
-                <span class="social-icon social-icon-email" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                    <path d="M2 7l10 7 10-7"></path>
-                  </svg>
-                </span>
-                <span>orpheuzkaze@gmail.com</span>
-              </a>
-              <a href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer" class="social-link">
-                <img src="./assets/x-logo-icon.png" alt="" class="social-icon-image" aria-hidden="true" />
-                <span>X / Twitter</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="profile" class="section">
-        <div class="container profile-spotlight">
-          <div class="profile-copy">
-            <h1 class="section-title">Profile</h1>
-            <h2>Hello, I'm Orpheuzkaze.</h2>
-            <p class="profile-lead">
-              I am a Web3 growth and community specialist with a background in
-              Information Technology. I work closely with teams to strengthen
-              visibility, build engaged communities, and improve market traction.
-            </p>
-            <p class="body-text">
-              I bring three years of experience as a Marketing Partnership Manager
-              and two years as a Growth Manager in Web3, with a practical and
-              results-oriented approach to every engagement.
-            </p>
-            <p class="body-text">
-              My strengths include community building, social media strategy, and
-              creative growth initiatives. I maintain high standards across
-              marketing, community engagement, and content creation.
-            </p>
-            <p class="body-text">
-              Alongside the featured roles below, I am also working on a freelance
-              basis with clients across growth, community, and partnership needs.
-              Those engagements are ongoing and are not listed here by preference.
-            </p>
-            <div class="profile-details">
-              <div class="profile-detail">
-                <span>Experience</span>
-                <strong>6 years</strong>
+          <div class="hero__media" data-reveal>
+            <figure class="portrait">
+              <div class="portrait__frame">
+                <img src="./assets/profile-picture.webp" alt="Orpheuzkaze profile picture" width="600" height="600" fetchpriority="high" />
               </div>
-              <div class="profile-detail">
-                <span>Availability</span>
-                <strong>Freelance &amp; project-based</strong>
-              </div>
-              <div class="profile-detail">
-                <span>Region</span>
+              <figcaption class="portrait__tag">
+                <span class="mono">Based in</span>
                 <strong>Indonesia</strong>
+              </figcaption>
+              <div class="portrait__badge" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                  <defs><path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
+                  <text><textPath href="#circle">WEB3 · COMMUNITY · GROWTH · AI · </textPath></text>
+                </svg>
+                <span>✦</span>
               </div>
-              <div class="profile-detail">
-                <span>CV</span>
-                <strong>Available on request</strong>
-              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <dl class="hero__stats" data-reveal>
+            <div><dt>Experience</dt><dd>6 yrs</dd></div>
+            <div><dt>Social reach built</dt><dd>1.03M+</dd></div>
+            <div><dt>Collaborations</dt><dd>850+</dd></div>
+            <div><dt>Raised supported</dt><dd>$850K+</dd></div>
+          </dl>
+        </div>
+
+        <!-- Brand partners marquee -->
+        <div class="marquee" aria-label="Brand partners">
+          <div class="marquee__track">
+            <ul class="marquee__group">
+              <li><a href="https://x.com/SeiNetwork" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/sei.jpg" alt="" loading="lazy" />Sei Network</a></li>
+              <li><a href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/pancakeswap.jpg" alt="" loading="lazy" />PancakeSwap</a></li>
+              <li><a href="https://x.com/BNBCHAIN" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/bnbchain.jpg" alt="" loading="lazy" />BNB Chain</a></li>
+              <li><a href="https://x.com/somnia_network" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/somnia.png" alt="" loading="lazy" />Somnia Network</a></li>
+              <li><a href="https://x.com/KFCINDONESIA" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/kfc-indonesia.jpg" alt="" loading="lazy" />KFC Indonesia</a></li>
+              <li><a href="https://x.com/monad" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/monad.jpg" alt="" loading="lazy" />Monad</a></li>
+              <li><a href="https://x.com/MagicEden" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/magiceden.png" alt="" loading="lazy" />Magic Eden</a></li>
+              <li><a href="https://x.com/Tokocrypto" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/tokocrypto.jpg" alt="" loading="lazy" />Tokocrypto</a></li>
+              <li><a href="https://x.com/blumcrypto" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/blum.jpg" alt="" loading="lazy" />Blum</a></li>
+              <li><a href="https://x.com/reku_id" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/reku.jpg" alt="" loading="lazy" />Reku</a></li>
+              <li><a href="https://x.com/MEXC" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/mexc.jpg" alt="" loading="lazy" />MEXC</a></li>
+            </ul>
+            <!-- duplicated by portfolio.js for a seamless loop -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 · ABOUT ============ -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">02</span>
+            <p class="eyebrow">About</p>
+            <h2 class="section__title">Hello, I'm <em>Orpheuzkaze.</em></h2>
+          </header>
+
+          <div class="about">
+            <div class="about__copy">
+              <p class="about__lead" data-reveal>
+                I'm a Web3 growth and community specialist with a background in Information
+                Technology. I work closely with teams to strengthen visibility, build engaged
+                communities, and improve market traction.
+              </p>
+              <p data-reveal>
+                I bring three years of experience as a Marketing Partnership Manager and two
+                years as a Growth Manager in Web3, with a practical and results-oriented approach
+                to every engagement. In recent years I've worked across AI, gaming, NFT, and
+                blockchain projects.
+              </p>
+              <p data-reveal>
+                My strengths include community building, social media strategy, and creative
+                growth initiatives. I keep high standards across marketing, community engagement,
+                and content creation.
+              </p>
+
+              <aside class="note" data-reveal>
+                <span class="note__label mono">Current work</span>
+                <p>
+                  Alongside the featured roles below, I'm also supporting clients on a freelance
+                  basis across growth, community, and partnerships. Those engagements are ongoing,
+                  and client details stay private.
+                </p>
+              </aside>
+
+              <a class="link-arrow" href="./profile.html" data-reveal>
+                More about me
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <div class="profile-actions">
-              <button class="button-link" type="button" id="tell-more-btn">Learn more about me</button>
+
+            <div class="about__side">
+              <dl class="facts" data-reveal>
+                <div><dt>Experience</dt><dd>6 years</dd></div>
+                <div><dt>Availability</dt><dd>Freelance &amp; project-based</dd></div>
+                <div><dt>Region</dt><dd>Indonesia</dd></div>
+                <div><dt>Languages</dt><dd>English &amp; Bahasa Indonesia</dd></div>
+                <div><dt>CV</dt><dd>Available on request</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Skills / tools -->
+          <div class="skills" id="skills">
+            <h3 class="sub-title" data-reveal>Toolkit &amp; capabilities</h3>
+            <div class="skills__grid">
+              <article class="skill skill--feature" data-reveal>
+                <span class="skill__tag mono">Core stack</span>
+                <h4>Discord, X, Telegram, Notion, Google Workspace</h4>
+                <p>My main toolkit for running community operations, coordinating campaigns, managing communication, and keeping cross-team work organized.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Growth</span>
+                <h4>Community &amp; KOL Growth</h4>
+                <p>Building engaged communities and driving growth through KOL partnerships, influencer outreach, ambassador programs, and coordinated activation campaigns.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Languages</span>
+                <h4>English &amp; Bahasa Indonesia</h4>
+                <p>Professional proficiency in both, for client communication, community management, partnerships, and campaigns for local and international audiences.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Social</span>
+                <h4>X, Discord, Telegram</h4>
+                <p>Used daily for audience growth, moderation, engagement, announcements, Spaces, and ongoing community management.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Operations</span>
+                <h4>Notion, Google Sheets, Google Docs</h4>
+                <p>For tracking collaborations, planning campaigns, preparing reports, maintaining documentation, and supporting internal coordination.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Partnerships</span>
+                <h4>Gmail, Calendar, Meet, Spreadsheet Pipelines</h4>
+                <p>How I manage outreach, partner follow-up, scheduling, deal flow, and the day-to-day running of collaborations.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Content</span>
+                <h4>Canva, Google Drive, ChatGPT</h4>
+                <p>For drafting content, lightweight design, campaign assets, and organized content workflows.</p>
+              </article>
+              <article class="skill" data-reveal>
+                <span class="skill__tag mono">Analytics</span>
+                <h4>Social Metrics, Community Insights, Manual Reporting</h4>
+                <p>How I review campaign traction, audience growth, event performance, and activation outcomes.</p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="freelance" class="section freelance-section">
-        <div class="container">
-          <article class="freelance-card">
-            <p class="eyebrow">Current Work</p>
-            <h2>Also active on a freelance basis</h2>
-            <p class="freelance-card__text">
-              In addition to the featured roles on this site, I am currently supporting
-              clients through freelance work in growth, community, and partnerships.
-              These engagements are ongoing, and client details remain private.
-            </p>
-          </article>
+      <!-- ============ 03 · X PROFILE ============ -->
+      <section class="section section--tint" id="x-profile">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">03</span>
+            <p class="eyebrow">X Profile</p>
+            <h2 class="section__title">Where I build <em>in public.</em></h2>
+          </header>
+
+          <div class="xgrid">
+            <article class="xcard" data-reveal>
+              <div class="xcard__banner" aria-hidden="true"></div>
+              <div class="xcard__body">
+                <div class="xcard__top">
+                  <img class="xcard__avatar" src="./assets/profile-picture.webp" alt="" width="96" height="96" loading="lazy" />
+                  <a class="btn btn--light btn--sm" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">Follow on X</a>
+                </div>
+                <h3 class="xcard__name">
+                  Orpheuzkaze
+                  <svg class="xcard__verified" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"/></svg>
+                </h3>
+                <p class="xcard__handle mono">@orpheuskaze</p>
+                <p class="xcard__bio">
+                  Web3 growth · community · partnerships. Building momentum for AI, gaming &amp; NFT
+                  ecosystems from Indonesia. Open to freelance.
+                </p>
+                <ul class="xcard__meta">
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                    Indonesia
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    orpheuzkaze-portfolio.vercel.app
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <div class="xtopics">
+              <p class="xtopics__intro" data-reveal>
+                X is where most of my work happens: hosting Spaces, running campaigns,
+                amplifying partners, and talking with the communities I help grow.
+              </p>
+              <ul class="topic-list">
+                <li data-reveal><span class="mono">01</span><strong>Growth playbooks</strong><p>Campaigns, collabs, and go-to-market lessons from shipping in Web3.</p></li>
+                <li data-reveal><span class="mono">02</span><strong>Community ops</strong><p>Moderation, engagement loops, and keeping Discords healthy at scale.</p></li>
+                <li data-reveal><span class="mono">03</span><strong>Spaces &amp; AMAs</strong><p>Hosting and co-hosting live sessions across ecosystems.</p></li>
+                <li data-reveal><span class="mono">04</span><strong>AI &amp; agents</strong><p>Exploring how AI workflows can power creative and community work.</p></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="experience" class="section">
-        <div class="container experience-section">
-          <div class="experience-intro">
-            <p class="eyebrow">Featured Experience</p>
-            <h2>I partner with projects that share a clear vision.</h2>
-            <p class="experience-summary">
-              A selection of past and present roles spanning growth, partnerships,
-              moderation, and community operations across the Web3 space. This is not
-              a complete list of my current work.
+      <!-- ============ 04 · TOP POSTS ============ -->
+      <section class="section" id="top-posts">
+        <div class="wrap">
+          <header class="section__head section__head--row" data-reveal>
+            <div>
+              <span class="section__index">04</span>
+              <p class="eyebrow">Top Posts</p>
+              <h2 class="section__title">Selected <em>posts.</em></h2>
+            </div>
+            <a class="link-arrow" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">
+              See all on X
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </header>
+
+          <!--
+            HOW TO FEATURE POSTS
+            Paste a post URL into data-post, e.g.
+              data-post="https://x.com/orpheuskaze/status/1234567890"
+            Cards with a URL are swapped for the official X embed by portfolio.js.
+            Cards without a URL show the styled fallback below.
+          -->
+          <div class="posts" id="posts">
+            <article class="post" data-post="" data-reveal>
+              <span class="post__kind mono">Thread · Growth</span>
+              <p class="post__text">Lessons from scaling Web3 communities from zero to six figures: collabs, Spaces, and the engagement loops that actually stick.</p>
+              <a class="post__link" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">Read on X →</a>
+            </article>
+            <article class="post" data-post="" data-reveal>
+              <span class="post__kind mono">Space · AMA</span>
+              <p class="post__text">Live sessions, mint parties, and community calls hosted across ecosystems. Catch the next one on my timeline.</p>
+              <a class="post__link" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">Read on X →</a>
+            </article>
+            <article class="post" data-post="" data-reveal>
+              <span class="post__kind mono">AI · Creative</span>
+              <p class="post__text">Experiments with AI tools and agentic workflows for content, campaigns, and community operations.</p>
+              <a class="post__link" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">Read on X →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 05 · AI CREATIVE LAB ============ -->
+      <section class="section section--lab" id="lab">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">05</span>
+            <p class="eyebrow eyebrow--ai">AI Creative Lab</p>
+            <h2 class="section__title">Where growth meets <em>generative.</em></h2>
+            <p class="section__sub">
+              I follow AI agents, agentic workflows, and automation closely, and I keep testing
+              how they can make community and creative work faster and sharper.
             </p>
+          </header>
+
+          <div class="lab">
+            <figure class="lab__visual" data-reveal>
+              <img src="./assets/get-to-know/ai-agents-workflows.jpg" alt="AI agents and workflows" loading="lazy" />
+              <figcaption class="mono"><span class="pulse"></span> lab / active</figcaption>
+            </figure>
+
+            <div class="lab__cards">
+              <article class="lab-card" data-reveal>
+                <div class="lab-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                </div>
+                <h3>Agentic workflows</h3>
+                <p>Exploring AI agents for repetitive community ops such as reporting, collab tracking, and moderation triage, so more time goes to people.</p>
+                <span class="lab-card__tag mono">Exploring</span>
+              </article>
+              <article class="lab-card" data-reveal>
+                <div class="lab-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4zM14 6l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>AI-assisted content</h3>
+                <p>Drafting, ideation, and campaign assets with ChatGPT and Canva, with my own editorial judgment always on top.</p>
+                <span class="lab-card__tag mono">In use</span>
+              </article>
+              <article class="lab-card" data-reveal>
+                <div class="lab-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5v5l4.5-2.5L10 9.5z" fill="currentColor"/></svg>
+                </div>
+                <h3>Explainers &amp; visuals</h3>
+                <p>Short-form explainers and visuals that make Web3 concepts easier to understand for new community members.</p>
+                <span class="lab-card__tag mono">Experimenting</span>
+              </article>
+              <article class="lab-card" data-reveal>
+                <div class="lab-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <h3>Smarter reporting</h3>
+                <p>Turning social metrics and community insights into clear, repeatable reports for teams and partners.</p>
+                <span class="lab-card__tag mono">Exploring</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 06 · EXPERIENCE ============ -->
+      <section class="section" id="experience">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">06</span>
+            <p class="eyebrow">Experience</p>
+            <h2 class="section__title">I partner with projects that share <em>a clear vision.</em></h2>
+            <p class="section__sub">
+              A selection of past and present roles across growth, partnerships, moderation, and
+              community operations in Web3. This isn't a complete list of my current work.
+            </p>
+          </header>
+
+          <div class="logos" data-reveal>
+            <a href="https://x.com/4uaicrypto" target="_blank" rel="noreferrer"><img src="./logos/Foruai.jpg" alt="" loading="lazy" /><span>FORUAI</span></a>
+            <a href="https://x.com/Lilstarrrs" target="_blank" rel="noreferrer"><img src="./logos/Lilstars.jpg" alt="" loading="lazy" /><span>LILSTARS</span></a>
+            <a href="https://x.com/aPriori" target="_blank" rel="noreferrer"><img src="./logos/Apriori.jpg" alt="" loading="lazy" /><span>APRIORI</span></a>
+            <a href="https://x.com/Khugaverse" target="_blank" rel="noreferrer"><img src="./logos/Khuga.jpg" alt="" loading="lazy" /><span>KHUGA</span></a>
+            <a href="https://x.com/KomethXYZ" target="_blank" rel="noreferrer"><img src="./logos/Kometh.jpg" alt="" loading="lazy" /><span>KOMETH</span></a>
+            <a href="https://x.com/imaginary_ones" target="_blank" rel="noreferrer"><img src="./logos/Imaginary ones.jpg" alt="" loading="lazy" /><span>IMAGINARY ONES</span></a>
+            <a href="https://x.com/fractalwagmi" target="_blank" rel="noreferrer"><img src="./logos/Fractal.jpg" alt="" loading="lazy" /><span>FRACTAL</span></a>
+            <a href="https://x.com/StressCapitals" target="_blank" rel="noreferrer"><img src="./logos/Stress capitals.jpg" alt="" loading="lazy" /><span>STRESS CAPITALS</span></a>
           </div>
 
-          <div class="experience-logos">
-            <a class="experience-logo-card" href="https://x.com/4uaicrypto" target="_blank" rel="noreferrer">
-              <img src="./logos/Foruai.jpg" alt="FORUAI logo" />
-              <span>FORUAI</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/Lilstarrrs" target="_blank" rel="noreferrer">
-              <img src="./logos/Lilstars.jpg" alt="LILSTARS logo" />
-              <span>LILSTARS</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/aPriori" target="_blank" rel="noreferrer">
-              <img src="./logos/Apriori.jpg" alt="Apriori logo" />
-              <span>APRIORI</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/Khugaverse" target="_blank" rel="noreferrer">
-              <img src="./logos/Khuga.jpg" alt="Khuga logo" />
-              <span>KHUGA</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/KomethXYZ" target="_blank" rel="noreferrer">
-              <img src="./logos/Kometh.jpg" alt="Kometh logo" />
-              <span>KOMETH</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/imaginary_ones" target="_blank" rel="noreferrer">
-              <img src="./logos/Imaginary ones.jpg" alt="Imaginary Ones logo" />
-              <span>IMAGINARY ONES</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/fractalwagmi" target="_blank" rel="noreferrer">
-              <img src="./logos/Fractal.jpg" alt="Fractal logo" />
-              <span>FRACTAL</span>
-            </a>
-            <a class="experience-logo-card" href="https://x.com/StressCapitals" target="_blank" rel="noreferrer">
-              <img src="./logos/Stress capitals.jpg" alt="Stress Capitals logo" />
-              <span>STRESS CAPITALS</span>
-            </a>
-          </div>
-
-          <div class="experience-timeline">
-            <article class="experience-entry">
-              <div class="experience-year">2024 — Now</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/Lilstarrrs" target="_blank" rel="noreferrer">LILSTARS | Growth and Marketing (Hybrid)</a>
-                <p class="experience-meta">An IP-focused NFT project on Monad</p>
-                <ul>
-                  <li>Planned and facilitated AMAs, cross-collaborations, and partnerships to strengthen community participation and brand visibility.</li>
+          <ol class="timeline">
+            <li class="job" data-reveal>
+              <div class="job__when mono">2024 to Now</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Lilstars.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/Lilstarrrs" target="_blank" rel="noreferrer">LILSTARS</a></h3>
+                    <p class="job__role">Growth and Marketing <span>· Hybrid</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">An IP-focused NFT project on Monad</p>
+                <ul class="job__metrics">
+                  <li><strong>0 → 140K</strong> followers</li>
+                  <li><strong>0 → 180K</strong> Discord</li>
+                  <li><strong>200+</strong> collabs</li>
+                  <li><strong>$100K</strong> mint raised</li>
+                </ul>
+                <ul class="job__list">
+                  <li>Planned and ran AMAs, cross-collaborations, and partnerships to strengthen community participation and brand visibility.</li>
                   <li>Grew LILSTARS followers from 0 to 140K.</li>
                   <li>Grew the LILSTARS Discord community from 0 to 180K members.</li>
-                  <li>Managed 200+ pre-mint and post-mint collaborations, ensuring alignment with broader business objectives.</li>
+                  <li>Managed 200+ pre-mint and post-mint collaborations aligned with broader business objectives.</li>
                   <li>Supported a mint campaign that raised 100K USD.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2024 — Now</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/foruai" target="_blank" rel="noreferrer">FORUAI | Growth Manager (Hybrid)</a>
-                <p class="experience-meta">An AI and reputation platform on BNB Chain</p>
-                <ul>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2024 to Now</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Foruai.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/foruai" target="_blank" rel="noreferrer">FORUAI</a></h3>
+                    <p class="job__role">Growth Manager <span>· Hybrid</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">An AI and reputation platform on BNB Chain</p>
+                <ul class="job__metrics">
+                  <li><strong>50K → 250K</strong> followers</li>
+                  <li><strong>0 → 180K</strong> Discord</li>
+                  <li><strong>GTM</strong> support</li>
+                </ul>
+                <ul class="job__list">
                   <li>Established partnerships with local communities across Indonesia.</li>
-                  <li>Led community engagement across social media and digital platforms, facilitating discussions and responding to inquiries in a timely manner.</li>
+                  <li>Led community engagement across social media and digital platforms, running discussions and answering questions quickly.</li>
                   <li>Coordinated AMAs, cross-collaborations, and partnerships to strengthen community participation and brand presence.</li>
-                  <li>Supported go-to-market efforts focused on user conversion and acquisition.</li>
+                  <li>Supported go-to-market work focused on user conversion and acquisition.</li>
                   <li>Grew FORU followers from 50K to 250K and Discord membership from 0 to 180K.</li>
-                  <li>Developed strategies to increase user inflow and improve campaign performance.</li>
+                  <li>Built strategies to increase user inflow and improve campaign performance.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2024 — 2025</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/aPriori" target="_blank" rel="noreferrer">Apriori Labs | Community Manager (Remote)</a>
-                <p class="experience-meta">An intelligent order-flow coordination layer for high-performance blockchains</p>
-                <ul>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2024 to 2025</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Apriori.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/aPriori" target="_blank" rel="noreferrer">Apriori Labs</a></h3>
+                    <p class="job__role">Community Manager <span>· Remote</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">An intelligent order-flow coordination layer for high-performance blockchains</p>
+                <ul class="job__metrics">
+                  <li><strong>200+</strong> partnerships</li>
+                  <li><strong>Pre &amp; post</strong> TGE</li>
+                  <li><strong>MONAD</strong> Singapore</li>
+                </ul>
+                <ul class="job__list">
                   <li>Built and maintained relationships with key partners, including companies, influencers, and organizations, to deliver successful collaborations.</li>
-                  <li>Managed 200+ pre-TGE and post-TGE partnerships, ensuring alignment with overall business goals.</li>
+                  <li>Managed 200+ pre-TGE and post-TGE partnerships aligned with overall business goals.</li>
                   <li>Represented the project at offline events, including MONAD in Singapore.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2023 — 2024</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/Khugaverse" target="_blank" rel="noreferrer">Khuga Labs | Partnership (Remote)</a>
-                <p class="experience-meta">A leading NFT project within the gaming sector</p>
-                <ul>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2023 to 2024</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Khuga.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/Khugaverse" target="_blank" rel="noreferrer">Khuga Labs</a></h3>
+                    <p class="job__role">Partnership <span>· Remote</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">A leading NFT project in the gaming sector</p>
+                <ul class="job__metrics">
+                  <li><strong>7K → 80K</strong> followers</li>
+                  <li><strong>1K → 20K</strong> Discord</li>
+                  <li><strong>$500K+ · 400 ETH</strong> volume</li>
+                  <li><strong>200+</strong> collabs</li>
+                </ul>
+                <ul class="job__list">
                   <li>Built and maintained relationships with key partners, including companies, influencers, and organizations, to deliver successful collaborations.</li>
                   <li>Grew Khuga followers from 7K to 80K and Discord membership from 1K to 20K.</li>
                   <li>Supported fundraising and trading efforts that generated over $500,000 and 400 ETH in OpenSea volume.</li>
-                  <li>Managed 200+ pre-mint and post-mint collaborations, ensuring alignment with broader business objectives.</li>
-                  <li>Worked closely with internal teams to ensure partnership initiatives supported strategic goals.</li>
+                  <li>Managed 200+ pre-mint and post-mint collaborations aligned with broader business objectives.</li>
+                  <li>Worked closely with internal teams so partnership initiatives supported strategic goals.</li>
                   <li>Represented the project at offline events, including Coinfest, MONAD, and W3GG.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2021 — Present</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/StressCapitals" target="_blank" rel="noreferrer">Stress Capitals | Community Manager (Remote)</a>
-                <ul>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2021 to Present</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Stress capitals.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/StressCapitals" target="_blank" rel="noreferrer">Stress Capitals</a></h3>
+                    <p class="job__role">Community Manager <span>· Remote</span></p>
+                  </div>
+                </div>
+                <ul class="job__metrics">
+                  <li><strong>&lt;5K → 25K</strong> followers</li>
+                  <li><strong>1K → 28K</strong> Discord</li>
+                  <li><strong>AJAIB · INDODAX · FLIPSTER</strong></li>
+                </ul>
+                <ul class="job__list">
                   <li>Established partnerships with local exchanges, including AJAIB, INDODAX, and FLIPSTER, to support growth and visibility.</li>
                   <li>Grew Stress Capitals followers from under 5K to 25K and Discord membership from 1K to 28K.</li>
-                  <li>Led community engagement across social media and digital platforms, facilitating discussions and responding to inquiries promptly.</li>
+                  <li>Led community engagement across social media and digital platforms, running discussions and answering questions promptly.</li>
                   <li>Coordinated AMAs, cross-collaborations, and partnerships to strengthen community participation and brand presence.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2023</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/KomethXYZ" target="_blank" rel="noreferrer">Kometh | Partnership (Remote)</a>
-                <p class="experience-meta">A Web3 NFT project within the comic sector</p>
-                <ul>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2023</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Kometh.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/KomethXYZ" target="_blank" rel="noreferrer">Kometh</a></h3>
+                    <p class="job__role">Partnership <span>· Remote</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">A Web3 NFT project in the comic sector</p>
+                <ul class="job__metrics">
+                  <li><strong>&lt;10K → 95K</strong> followers</li>
+                  <li><strong>1K → 110K</strong> Discord</li>
+                  <li><strong>$250K · 100 ETH</strong> volume</li>
+                  <li><strong>250+</strong> collabs</li>
+                </ul>
+                <ul class="job__list">
                   <li>Nurtured partnerships with influencers and organizations, contributing to $250,000 and 100 ETH in OpenSea volume.</li>
                   <li>Grew Kometh followers from under 10K to 95K and Discord membership from 1K to 110K.</li>
-                  <li>Managed 250+ pre- and post-mint collaborations, working closely with multiple departments to align partnerships with business strategy.</li>
+                  <li>Managed 250+ pre- and post-mint collaborations, working with multiple departments to align partnerships with business strategy.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2022 — 2023</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/Imaginary_Ones" target="_blank" rel="noreferrer">Imaginary Ones | Moderator (Remote)</a>
-                <p class="experience-meta">An NFT project supported by a community of 100,000+ members</p>
-                <ul>
-                  <li>Managed community moderation, reviewed reports, and resolved issues thoughtfully and efficiently.</li>
-                  <li>Engaged actively in community discussions, fostering a welcoming environment and addressing member inquiries.</li>
-                  <li>Coordinated with sales and product development teams to ensure moderation supported partnership and brand objectives.</li>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2022 to 2023</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Imaginary ones.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/Imaginary_Ones" target="_blank" rel="noreferrer">Imaginary Ones</a></h3>
+                    <p class="job__role">Moderator <span>· Remote</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">An NFT project backed by a community of 100,000+ members</p>
+                <ul class="job__list">
+                  <li>Managed community moderation, reviewed reports, and resolved issues carefully and efficiently.</li>
+                  <li>Took an active part in community discussions, keeping the space welcoming and answering member questions.</li>
+                  <li>Coordinated with sales and product development teams so moderation supported partnership and brand objectives.</li>
                 </ul>
               </div>
-            </article>
+            </li>
 
-            <article class="experience-entry">
-              <div class="experience-year">2022 — 2023</div>
-              <div class="experience-body">
-                <a class="experience-title" href="https://x.com/fractalwagmi" target="_blank" rel="noreferrer">Fractal | Moderator (Remote)</a>
-                <p class="experience-meta">A gaming-focused NFT project</p>
-                <ul>
-                  <li>Moderated a growing community with care, ensuring content remained aligned with brand values.</li>
-                  <li>Engaged with members through chat discussions, fostering a positive and supportive community environment.</li>
-                  <li>Maintained consistent, thoughtful participation across daily community conversations.</li>
+            <li class="job" data-reveal>
+              <div class="job__when mono">2022 to 2023</div>
+              <div class="job__body">
+                <div class="job__head">
+                  <img src="./logos/Fractal.jpg" alt="" loading="lazy" />
+                  <div>
+                    <h3><a href="https://x.com/fractalwagmi" target="_blank" rel="noreferrer">Fractal</a></h3>
+                    <p class="job__role">Moderator <span>· Remote</span></p>
+                  </div>
+                </div>
+                <p class="job__meta">A gaming-focused NFT project</p>
+                <ul class="job__list">
+                  <li>Moderated a growing community with care, keeping content aligned with brand values.</li>
+                  <li>Engaged with members in chat to keep the community positive and supportive.</li>
+                  <li>Showed up consistently in daily community conversations.</li>
                 </ul>
               </div>
-            </article>
-          </div>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section class="section brands-section">
-        <div class="container">
-          <p class="eyebrow">Brand Partners</p>
-          <h2>Brand Partners</h2>
-          <p class="section-subheading">Trusted ecosystems and platforms I have collaborated with.</p>
-          <div class="marquee" aria-label="Trusted brands and ecosystems collaborated with">
-            <div class="marquee__track">
-              <div class="marquee__group">
-                <a class="marquee-logo-card" href="https://x.com/SeiNetwork" target="_blank" rel="noreferrer" aria-label="Sei Network on X">
-                  <img src="./assets/brand-logos/sei.jpg" alt="Sei Network logo" />
-                  <span class="marquee-logo-card__sub">Sei Network</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer" aria-label="PancakeSwap on X">
-                  <img src="./assets/brand-logos/pancakeswap.jpg" alt="PancakeSwap logo" />
-                  <span class="marquee-logo-card__sub">PancakeSwap</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/BNBCHAIN" target="_blank" rel="noreferrer" aria-label="BNB Chain on X">
-                  <img src="./assets/brand-logos/bnbchain.jpg" alt="BNB Chain logo" />
-                  <span class="marquee-logo-card__sub">BNB Chain</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/somnia_network" target="_blank" rel="noreferrer" aria-label="Somnia Network on X">
-                  <img src="./assets/brand-logos/somnia.png" alt="Somnia Network logo" />
-                  <span class="marquee-logo-card__sub">Somnia Network</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/KFCINDONESIA" target="_blank" rel="noreferrer" aria-label="KFC Indonesia on X">
-                  <img src="./assets/brand-logos/kfc-indonesia.jpg" alt="KFC Indonesia logo" />
-                  <span class="marquee-logo-card__sub">KFC Indonesia</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/monad" target="_blank" rel="noreferrer" aria-label="Monad on X">
-                  <img src="./assets/brand-logos/monad.jpg" alt="Monad logo" />
-                  <span class="marquee-logo-card__sub">Monad</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/MagicEden" target="_blank" rel="noreferrer" aria-label="Magic Eden on X">
-                  <img src="./assets/brand-logos/magiceden.png" alt="Magic Eden logo" />
-                  <span class="marquee-logo-card__sub">Magic Eden</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer" aria-label="PancakeSwap on X">
-                  <img src="./assets/brand-logos/pancakeswap.jpg" alt="PancakeSwap logo" />
-                  <span class="marquee-logo-card__sub">PancakeSwap</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/Tokocrypto" target="_blank" rel="noreferrer" aria-label="Tokocrypto on X">
-                  <img src="./assets/brand-logos/tokocrypto.jpg" alt="Tokocrypto logo" />
-                  <span class="marquee-logo-card__sub">Tokocrypto</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/blumcrypto" target="_blank" rel="noreferrer" aria-label="Blum on X">
-                  <img src="./assets/brand-logos/blum.jpg" alt="Blum logo" />
-                  <span class="marquee-logo-card__sub">Blum</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/reku_id" target="_blank" rel="noreferrer" aria-label="Reku on X">
-                  <img src="./assets/brand-logos/reku.jpg" alt="Reku logo" />
-                  <span class="marquee-logo-card__sub">Reku</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/MEXC" target="_blank" rel="noreferrer" aria-label="MEXC on X">
-                  <img src="./assets/brand-logos/mexc.jpg" alt="MEXC logo" />
-                  <span class="marquee-logo-card__sub">MEXC</span>
-                </a>
-              </div>
-              <div class="marquee__group" aria-hidden="true">
-                <a class="marquee-logo-card" href="https://x.com/SeiNetwork" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/sei.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">Sei Network</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/pancakeswap.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">PancakeSwap</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/BNBCHAIN" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/bnbchain.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">BNB Chain</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/somnia_network" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/somnia.png" alt="" />
-                  <span class="marquee-logo-card__sub">Somnia Network</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/KFCINDONESIA" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/kfc-indonesia.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">KFC Indonesia</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/monad" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/monad.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">Monad</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/MagicEden" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/magiceden.png" alt="" />
-                  <span class="marquee-logo-card__sub">Magic Eden</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/pancakeswap.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">PancakeSwap</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/Tokocrypto" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/tokocrypto.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">Tokocrypto</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/blumcrypto" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/blum.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">Blum</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/reku_id" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/reku.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">Reku</span>
-                </a>
-                <a class="marquee-logo-card" href="https://x.com/MEXC" target="_blank" rel="noreferrer" tabindex="-1">
-                  <img src="./assets/brand-logos/mexc.jpg" alt="" />
-                  <span class="marquee-logo-card__sub">MEXC</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section awards-section">
-        <div class="container">
-          <p class="eyebrow">Skills</p>
-          <h2>Tools I Use</h2>
-
-          <div class="awards-table">
-            <article class="award-row award-row-feature">
-              <div class="award-row__meta">
-                <span class="kpi-label">Core Stack</span>
-                <span class="award-year">Primary</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Discord, X, Telegram, Notion, Google Workspace</strong>
-                <p>My primary toolkit for running community operations, coordinating campaigns, managing communication, and keeping cross-team execution organized.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Growth</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Community &amp; KOL Growth</strong>
-                <p>Experienced in building engaged communities and driving growth through KOL partnerships, influencer outreach, ambassador programs, and coordinated activation campaigns.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Languages</span>
-              </div>
-              <div class="award-row__content">
-                <strong>English &amp; Bahasa Indonesia</strong>
-                <p>Professional proficiency in both languages, supporting client communication, community management, partnerships, and campaign execution across local and international audiences.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Social</span>
-              </div>
-              <div class="award-row__content">
-                <strong>X, Discord, Telegram</strong>
-                <p>Platforms I use daily for audience growth, moderation, engagement, announcements, Spaces, and ongoing community management.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Operations</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Notion, Google Sheets, Google Docs</strong>
-                <p>Tools for tracking collaborations, planning campaigns, preparing reports, maintaining documentation, and supporting internal coordination.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Partnerships</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Gmail, Calendar, Meet, Spreadsheet Pipelines</strong>
-                <p>How I manage outreach, partner follow-up, scheduling, deal flow, and the day-to-day execution of collaborations.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Content</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Canva, Google Drive, ChatGPT</strong>
-                <p>Resources I rely on for content drafting, lightweight design support, campaign assets, and organized content workflows.</p>
-              </div>
-            </article>
-
-            <article class="award-row">
-              <div class="award-row__meta">
-                <span class="award-year">Analytics</span>
-              </div>
-              <div class="award-row__content">
-                <strong>Social Metrics, Community Insights, Manual Reporting</strong>
-                <p>Approaches I use to review campaign traction, audience growth, event performance, and activation outcomes.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <p class="eyebrow">Events and Media</p>
-          <h2>Events &amp; Media</h2>
-          <p class="section-subheading">In-person events, AMAs, Spaces, and podcast appearances across multiple projects.</p>
-          <div class="event-grid">
-            <article class="mini-panel">
-              <strong>Event Highlights</strong>
-              <p>Represented FORU at in-person events in Singapore and Bangkok, Thailand.</p>
-              <p>Supported Khuga at Coinfest Bali through on-the-ground event coordination.</p>
-            </article>
-            <article class="mini-panel">
-              <strong>AMA / Space / Podcast</strong>
-              <p>I have hosted and supported AMAs, X Spaces, and podcast-style sessions across multiple Web3 projects — covering launches, roadmap updates, community Q&amp;A, and ongoing engagement programming.</p>
-              <p>Recent formats include Ask Me Anything sessions, Mint Parties, ForUNation calls, Rep Leaderboard sessions, Masterclasses, and recurring Space programming for different ecosystems.</p>
-            </article>
-          </div>
-
-          <div class="image-grid image-grid-two">
-            <div class="image-shell">
-              <picture>
-                <source media="(max-width: 768px)" srcset="./assets/pdf-pages/page-08-768.jpg" />
-                <img
-                  src="./assets/pdf-pages/page-08-1200.jpg"
-                  alt="Event highlights from portfolio materials"
-                  loading="lazy"
-                  decoding="async"
-                  width="1200"
-                  height="675"
-                />
-              </picture>
-            </div>
-            <div class="image-shell">
-              <picture>
-                <source media="(max-width: 768px)" srcset="./assets/pdf-pages/page-09-768.jpg" />
-                <img
-                  src="./assets/pdf-pages/page-09-1200.jpg"
-                  alt="AMA, Space, and podcast appearances from portfolio materials"
-                  loading="lazy"
-                  decoding="async"
-                  width="1200"
-                  height="675"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="kpis" class="section kpis-section">
-        <div class="container">
-          <p class="eyebrow">Key Results</p>
-          <h2>Key Results</h2>
-          <p class="section-subheading">Consistent execution across digital projects.</p>
-
-          <div class="kpis-intro">
-            <article class="kpi-card kpi-card-text">
-              <span class="kpi-label">Overview</span>
-              <p>
-                Years of work across growth, community, moderation, partnerships,
-                launches, and go-to-market execution have given me a grounded
-                foundation for building digital campaigns that deliver.
-              </p>
-            </article>
-
-            <article class="kpi-card kpi-card-text">
-              <span class="kpi-label">Execution</span>
-              <p>
-                My focus remains on audience growth, conversion, collaboration,
-                fundraising support, and stronger ecosystem traction throughout
-                each project cycle.
-              </p>
-            </article>
-          </div>
-
-          <div class="kpi-metrics">
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value">
-                <span class="kpi-stat-number" data-count="518000">518K+</span>
-              </div>
-              <span class="kpi-stat-label">Total Followers Growth</span>
-              <p>Total follower growth supported across LILSTARS, FORUAI, Khuga Labs, Stress Capitals, and Kometh.</p>
-            </article>
-
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value">
-                <span class="kpi-stat-number" data-count="515000">515K</span>
-              </div>
-              <span class="kpi-stat-label">Total Discord Growth</span>
-              <p>Total Discord member growth achieved across LILSTARS, FORUAI, Khuga Labs, Stress Capitals, and Kometh.</p>
-            </article>
-
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value">
-                <span class="kpi-stat-number kpi-stat-number--wide" data-count="1030000">1.03M+</span>
-              </div>
-              <span class="kpi-stat-label">Total Social Reach Built</span>
-              <p>Combined social and community audience developed through documented follower and Discord growth.</p>
-            </article>
-
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value">
-                <span class="kpi-stat-number" data-count="850">850+</span>
-              </div>
-              <span class="kpi-stat-label">Total Collaborations</span>
-              <p>Partnerships and collaborations managed across LILSTARS, Apriori, Khuga Labs, and Kometh.</p>
-            </article>
-
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value kpi-stat-value--split">
-                <span class="kpi-stat-number" data-count="850000">850K+</span>
-                <span class="kpi-stat-suffix">USD</span>
-              </div>
-              <span class="kpi-stat-label">Total Raised</span>
-              <p>Fundraising support contributed across LILSTARS, Khuga Labs, and Kometh initiatives.</p>
-            </article>
-
-            <article class="kpi-card kpi-stat-card">
-              <div class="kpi-stat-value kpi-stat-value--split">
-                <span class="kpi-stat-number" data-count="500">500</span>
-                <span class="kpi-stat-suffix">ETH+</span>
-              </div>
-              <span class="kpi-stat-label">OpenSea Volume</span>
-              <p>Trading volume supported across Khuga Labs and Kometh campaign efforts.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div class="container contact-box contact-box--premium">
-          <div class="contact-box__intro">
-            <p class="eyebrow">Let's Stay in Touch</p>
-            <h2>Contact</h2>
-            <p class="body-text contact-box__text">
-              I would be glad to hear from you regarding freelance work, partnerships,
-              growth strategy, community management, or collaboration opportunities.
-              For inquiries, please reach out through Telegram, email, or X.
+      <!-- ============ 07 · ACHIEVEMENTS ============ -->
+      <section class="section section--tint" id="achievements">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">07</span>
+            <p class="eyebrow">Achievements</p>
+            <h2 class="section__title">Results, <em>in numbers.</em></h2>
+            <p class="section__sub">
+              Years of work across growth, community, moderation, partnerships, launches, and
+              go-to-market, focused on audience growth, conversion, collaboration, fundraising
+              support, and stronger ecosystem traction.
             </p>
+          </header>
+
+          <div class="stats">
+            <article class="stat" data-reveal>
+              <span class="stat__num" data-count="518000">518K+</span>
+              <h3>Total Followers Growth</h3>
+              <p>Across LILSTARS, FORUAI, Khuga Labs, Stress Capitals, and Kometh.</p>
+            </article>
+            <article class="stat" data-reveal>
+              <span class="stat__num" data-count="515000">515K</span>
+              <h3>Total Discord Growth</h3>
+              <p>Across LILSTARS, FORUAI, Khuga Labs, Stress Capitals, and Kometh.</p>
+            </article>
+            <article class="stat stat--hl" data-reveal>
+              <span class="stat__num" data-count="1030000">1.03M+</span>
+              <h3>Total Social Reach Built</h3>
+              <p>Combined social and community audience from documented follower and Discord growth.</p>
+            </article>
+            <article class="stat" data-reveal>
+              <span class="stat__num" data-count="850">850+</span>
+              <h3>Total Collaborations</h3>
+              <p>Managed across LILSTARS, Apriori, Khuga Labs, and Kometh.</p>
+            </article>
+            <article class="stat" data-reveal>
+              <span class="stat__num" data-count="850000">850K+</span><span class="stat__unit">USD</span>
+              <h3>Total Raised</h3>
+              <p>Fundraising support across LILSTARS, Khuga Labs, and Kometh.</p>
+            </article>
+            <article class="stat" data-reveal>
+              <span class="stat__num" data-count="500">500</span><span class="stat__unit">ETH+</span>
+              <h3>OpenSea Volume</h3>
+              <p>Trading volume supported across Khuga Labs and Kometh campaigns.</p>
+            </article>
           </div>
-          <div class="contact-row contact-row--stacked">
-            <a href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer" class="social-link">
-              <span class="social-icon social-icon-telegram" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path>
-                </svg>
-              </span>
-              <span>@orpheuzkaze</span>
+
+          <!-- Events & media -->
+          <div class="events">
+            <h3 class="sub-title" data-reveal>Events &amp; Media</h3>
+            <div class="events__grid">
+              <article class="panel" data-reveal>
+                <span class="panel__tag mono">On the ground</span>
+                <h4>Event Highlights</h4>
+                <p>Represented FORU at in-person events in Singapore and Bangkok, Thailand.</p>
+                <p>Supported Khuga at Coinfest Bali with on-the-ground event coordination.</p>
+              </article>
+              <article class="panel" data-reveal>
+                <span class="panel__tag mono">On air</span>
+                <h4>AMA / Space / Podcast</h4>
+                <p>Hosted and supported AMAs, X Spaces, and podcast-style sessions across multiple Web3 projects, covering launches, roadmap updates, community Q&amp;A, and ongoing engagement programming.</p>
+                <p>Recent formats include Ask Me Anything sessions, Mint Parties, ForUNation calls, Rep Leaderboard sessions, Masterclasses, and recurring Spaces for different ecosystems.</p>
+              </article>
+            </div>
+            <div class="gallery">
+              <button class="gallery__item" type="button" data-reveal data-full="./assets/pdf-pages/page-08-1200.jpg" aria-label="Enlarge event highlights image">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./assets/pdf-pages/page-08-768.jpg" />
+                  <img src="./assets/pdf-pages/page-08-1200.jpg" alt="Event highlights from portfolio materials" loading="lazy" decoding="async" width="1200" height="675" />
+                </picture>
+              </button>
+              <button class="gallery__item" type="button" data-reveal data-full="./assets/pdf-pages/page-09-1200.jpg" aria-label="Enlarge AMA, Space, and podcast image">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./assets/pdf-pages/page-09-768.jpg" />
+                  <img src="./assets/pdf-pages/page-09-1200.jpg" alt="AMA, Space, and podcast appearances from portfolio materials" loading="lazy" decoding="async" width="1200" height="675" />
+                </picture>
+              </button>
+            </div>
+          </div>
+
+          <!-- Brand partners -->
+          <div class="partners">
+            <h3 class="sub-title" data-reveal>Brand Partners</h3>
+            <p class="partners__sub" data-reveal>Ecosystems and platforms I've collaborated with.</p>
+            <ul class="partners__grid">
+              <li data-reveal><a href="https://x.com/SeiNetwork" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/sei.jpg" alt="" loading="lazy" /><span>Sei Network</span></a></li>
+              <li data-reveal><a href="https://x.com/PancakeSwap" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/pancakeswap.jpg" alt="" loading="lazy" /><span>PancakeSwap</span></a></li>
+              <li data-reveal><a href="https://x.com/BNBCHAIN" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/bnbchain.jpg" alt="" loading="lazy" /><span>BNB Chain</span></a></li>
+              <li data-reveal><a href="https://x.com/somnia_network" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/somnia.png" alt="" loading="lazy" /><span>Somnia Network</span></a></li>
+              <li data-reveal><a href="https://x.com/KFCINDONESIA" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/kfc-indonesia.jpg" alt="" loading="lazy" /><span>KFC Indonesia</span></a></li>
+              <li data-reveal><a href="https://x.com/monad" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/monad.jpg" alt="" loading="lazy" /><span>Monad</span></a></li>
+              <li data-reveal><a href="https://x.com/MagicEden" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/magiceden.png" alt="" loading="lazy" /><span>Magic Eden</span></a></li>
+              <li data-reveal><a href="https://x.com/Tokocrypto" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/tokocrypto.jpg" alt="" loading="lazy" /><span>Tokocrypto</span></a></li>
+              <li data-reveal><a href="https://x.com/blumcrypto" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/blum.jpg" alt="" loading="lazy" /><span>Blum</span></a></li>
+              <li data-reveal><a href="https://x.com/reku_id" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/reku.jpg" alt="" loading="lazy" /><span>Reku</span></a></li>
+              <li data-reveal><a href="https://x.com/MEXC" target="_blank" rel="noreferrer"><img src="./assets/brand-logos/mexc.jpg" alt="" loading="lazy" /><span>MEXC</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 08 · GITHUB PROJECTS ============ -->
+      <section class="section" id="projects">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <span class="section__index">08</span>
+            <p class="eyebrow">GitHub Projects</p>
+            <h2 class="section__title">Things I'm <em>building.</em></h2>
+            <p class="section__sub">
+              Open-source tools and experiments at the intersection of Web3 communities and AI
+              workflows.
+            </p>
+          </header>
+
+          <!--
+            HOW TO ADD A PROJECT
+            Duplicate the .repo template below, fill in name, description, stack, and URL,
+            then remove the .repo--empty card. Keep personal/real-name accounts out if you
+            prefer to stay pseudonymous.
+
+            <a class="repo" href="https://github.com/USER/REPO" target="_blank" rel="noreferrer">
+              <div class="repo__top"><span class="repo__icon">…</span><span class="repo__arrow">↗</span></div>
+              <h3>repo-name</h3>
+              <p>Short description.</p>
+              <ul class="repo__stack"><li>TypeScript</li><li>Next.js</li></ul>
             </a>
-            <a href="mailto:orpheuzkaze@gmail.com" class="social-link">
-              <span class="social-icon social-icon-email" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                  <path d="M2 7l10 7 10-7"></path>
-                </svg>
-              </span>
-              <span>orpheuzkaze@gmail.com</span>
-            </a>
-            <a href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer" class="social-link">
-              <img src="./assets/x-logo-icon.png" alt="" class="social-icon-image" aria-hidden="true" />
-              <span>X / Twitter</span>
-            </a>
+          -->
+          <div class="repos">
+            <article class="repo repo--empty" data-reveal>
+              <div class="repo__top">
+                <span class="repo__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                </span>
+                <span class="repo__badge mono">Coming soon</span>
+              </div>
+              <h3>Public repositories on the way</h3>
+              <p>I'm packaging community tooling and AI workflow experiments for release. Want an early look? Get in touch.</p>
+              <a class="link-arrow" href="#contact">Ask for access</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 09 · CONTACT ============ -->
+      <section class="section contact" id="contact">
+        <div class="wrap">
+          <div class="contact__box">
+            <p class="eyebrow" data-reveal>Let's stay in touch</p>
+            <h2 class="contact__title" data-reveal>
+              Let's build <em>momentum</em><br />together.
+            </h2>
+            <p class="contact__text" data-reveal>
+              I'd be glad to hear from you about freelance work, partnerships, growth strategy,
+              community management, or collaboration opportunities.
+            </p>
+
+            <div class="contact__links" data-reveal>
+              <a class="clink" href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer">
+                <span class="clink__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                </span>
+                <span class="clink__label"><small class="mono">Telegram</small>@orpheuzkaze</span>
+                <span class="clink__arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="clink clink--email">
+                <a class="clink__main" href="mailto:orpheuzkaze@gmail.com">
+                  <span class="clink__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                  </span>
+                  <span class="clink__label"><small class="mono">Email</small>orpheuzkaze@gmail.com</span>
+                </a>
+                <button class="clink__copy mono" type="button" data-copy="orpheuzkaze@gmail.com">Copy</button>
+              </div>
+              <a class="clink" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">
+                <span class="clink__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </span>
+                <span class="clink__label"><small class="mono">X / Twitter</small>@orpheuskaze</span>
+                <span class="clink__arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; Orpheuzkaze</p>
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p class="footer__big" aria-hidden="true">ORPHEUZKAZE</p>
+        <div class="footer__row">
+          <p>&copy; <span id="year">2026</span> Orpheuzkaze. Web3 · Community · AI.</p>
+          <a href="#top" class="mono">Back to top ↑</a>
+        </div>
       </div>
     </footer>
 
-    <script src="./site.js?v=20260622"></script>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./portfolio.js?v=20261014" defer></script>
   </body>
 </html>
-
