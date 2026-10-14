@@ -1,0 +1,317 @@
+{
+  "_readme": "AI Creative Lab gallery. To add work: put videos in assets/lab/videos/ and images in assets/lab/images/ (optional poster images in assets/lab/posters/), then add an entry to `items`. categories: any of \"AI Videos\", \"Animation\", \"AI Art\", \"Experiments\". type: \"video\" or \"image\". Optional fields: poster, tools, link, linkLabel, duration, language, featured. Leave unknown fields out; they are hidden, never guessed.",
+  "items": [
+    {
+      "id": "x-blur-blast",
+      "type": "video",
+      "title": "Blur → Blast: Game Over",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-blur-blast.mp4",
+      "poster": "./assets/lab/posters/x-blur-blast.webp",
+      "description": "A game-style recap of Blur and Blast: $2.3B deposited before the chain was even live, the points-fuelled boom, a $62M exploit, and TVL down 97% from the peak. Two products that ran on rewards, and went quiet when the rewards stopped.",
+      "duration": "2:25",
+      "language": "English",
+      "featured": true
+    },
+    {
+      "id": "x-grokbot-intro",
+      "type": "video",
+      "title": "Grok Bot: It Works While I Sleep",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-grokbot-intro.mp4",
+      "poster": "./assets/lab/posters/x-grokbot-intro.webp",
+      "description": "An intro to Grok Bot: what it can and can’t do, its Canva, Figma, and Google Slides skills, roughly what it costs, and how it moved my work from creator to editor.",
+      "duration": "2:21",
+      "language": "English"
+    },
+    {
+      "id": "x-grokbot-tutorial",
+      "type": "video",
+      "title": "Got X Premium+? Make Videos with Grok Bot",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-grokbot-tutorial.mp4",
+      "poster": "./assets/lab/posters/x-grokbot-tutorial.webp",
+      "description": "A step-by-step tutorial for making videos with Grok Bot: open x.ai/bot, write a clear prompt (topic, language, length, style), review drafts until they feel right, render, and add an ElevenLabs voiceover safely. Start small, stay consistent.",
+      "duration": "1:17",
+      "language": "English"
+    },
+    {
+      "id": "x-xpass",
+      "type": "video",
+      "title": "XPass: Everything in One Subscription?",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-xpass.mp4",
+      "poster": "./assets/lab/posters/x-xpass.webp",
+      "description": "A case-file breakdown of a rumoured X subscription bundle: four leaked tiers from Plus to Ultra, the Grok and AI features in each, and what happens to existing Premium and SuperGrok plans. Rumour, not official.",
+      "duration": "1:00",
+      "language": "English"
+    },
+    {
+      "id": "x-colddm",
+      "type": "video",
+      "title": "Cold DMs: Then vs. Now",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-colddm.mp4",
+      "poster": "./assets/lab/posters/x-colddm.webp",
+      "description": "How cold DMs to founders opened doors for me in 2023, before AI, how the same approach still works today with Dirol on Monad, and how AI now does the heavy lifting. AI writes faster, but the DM still needs to be you.",
+      "duration": "1:42",
+      "language": "English"
+    },
+    {
+      "id": "x-hellotrade",
+      "type": "video",
+      "title": "HelloTrade: Meet the Team",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-hellotrade.mp4",
+      "poster": "./assets/lab/posters/x-hellotrade.webp",
+      "description": "An animated intro to HelloTrade on Monad: founders who helped launch BlackRock’s Bitcoin ETF (IBIT), advisors including Arthur Hayes, Josh Lim, and Larry Florio, and a mission to make global capital markets accessible to everyone.",
+      "duration": "1:05",
+      "language": "English"
+    },
+    {
+      "id": "x-moncock-en",
+      "type": "video",
+      "title": "Moncock: A Rooster on Monad",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-moncock-en.mp4",
+      "poster": "./assets/lab/posters/x-moncock-en.webp",
+      "description": "A fight-card style breakdown of $MONCOCK, a Monad memecoin built around a community mascot: the origin story, why it’s so memeable, the tale of the tape, and a possible catalyst. Education, not financial advice; disclosure included in the video.",
+      "duration": "1:30",
+      "language": "English"
+    },
+    {
+      "id": "x-bitget-safu",
+      "type": "video",
+      "title": "Bitget Masih SAFU?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-bitget-safu.mp4",
+      "poster": "./assets/lab/posters/x-bitget-safu.webp",
+      "description": "A Bahasa Indonesia explainer after a hack scare: Bitget’s staged withdrawal schedule for BTC, ETH, and USDT, a real test trade, the big-picture withdrawal numbers, and the lessons: don’t panic, check official info, and do your own research.",
+      "duration": "1:32",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-dirol-en",
+      "type": "video",
+      "title": "What Even Is Dirol?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-dirol-en.mp4",
+      "poster": "./assets/lab/posters/x-dirol-en.webp",
+      "description": "A 10-part explainer on Dirol, a social trading app on Monad: swaps, charts, limit orders, and new tokens in one app, one-click non-custodial trading, spot and perps, and how to join the whitelist. Education, not financial advice.",
+      "duration": "1:28",
+      "language": "English"
+    },
+    {
+      "id": "x-dirol",
+      "type": "video",
+      "title": "Dirol Itu Apa Sih?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-dirol.mp4",
+      "poster": "./assets/lab/posters/x-dirol.webp",
+      "description": "The Bahasa Indonesia version of the Dirol explainer: a social trading app on Monad with swaps, charts, limit orders, one-click non-custodial trading, spot and perps, and how to join the whitelist. Education, not financial advice.",
+      "duration": "1:29",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-themutual",
+      "type": "video",
+      "title": "The Mutual Fun",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-themutual.mp4",
+      "poster": "./assets/lab/posters/x-themutual.webp",
+      "description": "A short look at The Mutual Fun on Robinhood Chain: five on-chain funds run by the people who hold them, no owner and no upgrade path, and how to apply for a soulbound TMF Pass.",
+      "duration": "0:31",
+      "language": "English"
+    },
+    {
+      "id": "x-mutuals",
+      "type": "video",
+      "title": "The Mutual Fun: Mutuals",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-mutuals.mp4",
+      "poster": "./assets/lab/posters/x-mutuals.webp",
+      "description": "A cinematic follow-up on The Mutual Fun’s Mutuals desk: swipe-style applications, a 72-hour window for pass holders, and a system built on working together.",
+      "duration": "0:45",
+      "language": "English"
+    },
+    {
+      "id": "x-botdirectory",
+      "type": "video",
+      "title": "botdirectory.ai: Ready-to-Copy Grok Bot Prompts",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-botdirectory.mp4",
+      "poster": "./assets/lab/posters/x-botdirectory.webp",
+      "description": "A quick discovery video on botdirectory.ai: a public, open-source directory of hundreds of ready-to-copy Grok Bot prompts for marketing, sales, productivity, ops, and more. Browse, copy, launch.",
+      "duration": "0:30",
+      "language": "English"
+    },
+    {
+      "id": "x-revenge-trade",
+      "type": "video",
+      "title": "Revenge Trade: Abis Fumble, Pengen Bales Dendam?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-revenge-trade.mp4",
+      "poster": "./assets/lab/posters/x-revenge-trade.webp",
+      "description": "A Bahasa Indonesia trading-psychology explainer: what revenge trading is (emotion, not setup), a personal overtrading story, why stopping and sleeping was the right call, and the lesson. Education, not financial advice.",
+      "duration": "1:05",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "grok-cli-remotion-tutorial",
+      "type": "video",
+      "title": "Make Videos with Grok CLI + Remotion",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/grok-cli-remotion-tutorial.mp4",
+      "poster": "./assets/lab/posters/grok-cli-remotion-tutorial.webp",
+      "description": "A beginner tutorial on making videos with an AI coding agent: install Grok CLI, open a terminal, add the Remotion skill, prompt clearly, and render straight to MP4. No design degree needed.",
+      "tools": [
+        "Grok CLI",
+        "Remotion"
+      ],
+      "duration": "2:06",
+      "language": "English"
+    },
+    {
+      "id": "apa-itu-bagworking",
+      "type": "video",
+      "title": "Apa itu Bagworking? Crypto Memecoin",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/apa-itu-bagworking.mp4",
+      "poster": "./assets/lab/posters/apa-itu-bagworking.webp",
+      "description": "An animated explainer in Bahasa Indonesia on bagworking in memecoin communities: what a bag is, what bag workers actually do (content, replies, raids, community, narrative), and the risks. Work does not guarantee a pump.",
+      "duration": "5:16",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "apa-itu-nft",
+      "type": "video",
+      "title": "Apa itu NFT? Panduan Pemula",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/apa-itu-nft.mp4",
+      "poster": "./assets/lab/posters/apa-itu-nft.webp",
+      "description": "A beginner's guide to NFTs in Bahasa Indonesia: fungible vs. non-fungible, NFTs as unique digital certificates on the blockchain, what they're used for, and how mint, wallet, trade, and on-chain records fit together.",
+      "duration": "2:48",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "art-ai-agents",
+      "type": "image",
+      "title": "AI Agents & Workflows",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/ai-agents-workflows.jpg",
+      "description": "From the Get to Know Me character series: a thoughtful interest in agentic systems."
+    },
+    {
+      "id": "art-gamer",
+      "type": "image",
+      "title": "Gamer",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/gamer.jpg",
+      "description": "From the Get to Know Me character series: a dedicated PC gamer with a love for both competitive and casual play."
+    },
+    {
+      "id": "art-music-lover",
+      "type": "image",
+      "title": "Music Lover",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/music-lover.jpg",
+      "description": "From the Get to Know Me character series: an enthusiast of R&B and Indonesian hip-hop."
+    },
+    {
+      "id": "art-singing",
+      "type": "image",
+      "title": "Singing",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/singing.jpg",
+      "description": "From the Get to Know Me character series: music as a meaningful emotional outlet."
+    },
+    {
+      "id": "art-movies",
+      "type": "image",
+      "title": "Watching Movies / Series",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/watching-movies-series.jpg",
+      "description": "From the Get to Know Me character series: a genuine appreciation for stories, culture, and language."
+    },
+    {
+      "id": "art-family",
+      "type": "image",
+      "title": "Family First",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/family-first.jpg",
+      "description": "From the Get to Know Me character series: family is my greatest priority."
+    },
+    {
+      "id": "art-cat-lover",
+      "type": "image",
+      "title": "Cat Lover",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/cat-lover.jpg",
+      "description": "From the Get to Know Me character series: a lifelong appreciation for cats."
+    },
+    {
+      "id": "art-milestone",
+      "type": "image",
+      "title": "Early Milestone",
+      "categories": [
+        "AI Art"
+      ],
+      "src": "./assets/get-to-know/milestone.jpg",
+      "description": "From the Get to Know Me character series: a milestone shaped by discipline and consistency."
+    }
+  ]
+}

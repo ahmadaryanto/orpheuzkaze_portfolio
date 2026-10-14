@@ -176,6 +176,232 @@
       });
   }
 
+  // AI Creative Lab: gallery rendered from data/lab.json
+  const labGrid = $("#lab-grid");
+  if (labGrid && window.fetch) {
+    const ICONS = {
+      play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>',
+      clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+      zoom: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+      prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    };
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    // Tiny DOM builder; text always goes through textContent.
+    const el = (tag, props = {}, ...kids) => {
+      const node = document.createElement(tag);
+      Object.entries(props).forEach(([k, v]) => {
+        if (v === undefined || v === null || v === false) return;
+        if (k === "class") node.className = v;
+        else if (k === "html") node.innerHTML = v;
+        else if (k === "text") node.textContent = v;
+        else if (k === "style") node.style.cssText = v;
+        else node.setAttribute(k, v === true ? "" : v);
+      });
+      kids.flat().filter(Boolean).forEach((kid) => node.append(kid));
+      return node;
+    };
+
+    const chips = (item, withTools = true) => {
+      const list = [];
+      (item.categories || []).forEach((c) => list.push(el("li", { text: c })));
+      if (item.language) list.push(el("li", { text: item.language }));
+      if (withTools) (item.tools || []).forEach((t) => list.push(el("li", { class: "is-tool", text: t })));
+      return list.length ? el("ul", { class: "chips-row" }, list) : null;
+    };
+
+    const toSeconds = (d) => (d || "").split(":").reduce((acc, n) => acc * 60 + Number(n || 0), 0);
+
+    // Hover preview: lazily attach the video source, play muted, pause on leave.
+    const attachPreview = (card, item) => {
+      if (!canHover || item.type !== "video" || reduceMotion) return;
+      const video = $("video", card);
+      card.addEventListener("mouseenter", () => {
+        if (!video.src) video.src = item.src;
+        video.play().then(() => card.classList.add("is-previewing")).catch(() => {});
+      });
+      card.addEventListener("mouseleave", () => {
+        card.classList.remove("is-previewing");
+        video.pause();
+      });
+    };
+
+    const spotlight = (card) => {
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    };
+
+    // ---- Theater ----
+    let theaterList = [];
+    let theaterIndex = 0;
+    let theaterReturn = null;
+    const theater = el("div", { class: "theater", role: "dialog", "aria-modal": "true", "aria-label": "AI Creative Lab viewer" });
+    const glow = el("div", { class: "theater__glow" });
+    const count = el("span", { class: "theater__count" });
+    const closeBtn = el("button", { class: "theater__btn", type: "button", "aria-label": "Close viewer", html: ICONS.close });
+    const prevBtn = el("button", { class: "theater__btn theater__btn--prev", type: "button", "aria-label": "Previous", html: ICONS.prev });
+    const nextBtn = el("button", { class: "theater__btn theater__btn--next", type: "button", "aria-label": "Next", html: ICONS.next });
+    const frame = el("div", { class: "theater__frame" });
+    const info = el("div", { class: "theater__info" });
+    theater.append(
+      glow,
+      el("div", { class: "theater__bar" }, count, closeBtn),
+      el("div", { class: "theater__stage" }, prevBtn, frame, nextBtn),
+      info
+    );
+    document.body.appendChild(theater);
+
+    const stopMedia = () => $$("video", frame).forEach((v) => { v.pause(); v.removeAttribute("src"); v.load(); });
+
+    const showTheater = (i) => {
+      theaterIndex = (i + theaterList.length) % theaterList.length;
+      const item = theaterList[theaterIndex];
+      stopMedia();
+      frame.replaceChildren(
+        item.type === "video"
+          ? el("video", { src: item.src, poster: item.poster, controls: true, autoplay: true, playsinline: true, preload: "auto" })
+          : el("img", { src: item.src, alt: item.title })
+      );
+      glow.style.backgroundImage = `url("${item.poster || item.src}")`;
+      count.textContent = `${String(theaterIndex + 1).padStart(2, "0")} / ${String(theaterList.length).padStart(2, "0")}`;
+      info.replaceChildren(...[
+        el("h3", { text: item.title }),
+        item.description ? el("p", { text: item.description }) : null,
+        chips(item),
+        item.link ? el("a", { class: "btn btn--primary btn--sm theater__link", href: item.link, target: "_blank", rel: "noreferrer", html: `${item.linkLabel ? "" : "View project "}${ICONS.arrow}` }) : null
+      ].filter(Boolean));
+      if (item.link && item.linkLabel) $(".theater__link", info).prepend(item.linkLabel + " ");
+      const multi = theaterList.length > 1;
+      prevBtn.hidden = !multi;
+      nextBtn.hidden = !multi;
+    };
+
+    const openTheater = (list, i, from) => {
+      theaterList = list;
+      theaterReturn = from || document.activeElement;
+      showTheater(i);
+      theater.classList.add("is-open");
+      document.body.classList.add("is-locked");
+      closeBtn.focus();
+    };
+
+    const closeTheater = () => {
+      theater.classList.remove("is-open");
+      document.body.classList.remove("is-locked");
+      stopMedia();
+      theaterReturn?.focus();
+    };
+
+    closeBtn.addEventListener("click", closeTheater);
+    prevBtn.addEventListener("click", () => showTheater(theaterIndex - 1));
+    nextBtn.addEventListener("click", () => showTheater(theaterIndex + 1));
+    theater.addEventListener("click", (e) => { if (e.target === theater || e.target.classList.contains("theater__stage")) closeTheater(); });
+    document.addEventListener("keydown", (e) => {
+      if (!theater.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeTheater();
+      else if (e.key === "ArrowLeft" && theaterList.length > 1) showTheater(theaterIndex - 1);
+      else if (e.key === "ArrowRight" && theaterList.length > 1) showTheater(theaterIndex + 1);
+    });
+
+    // ---- Render ----
+    const renderFeature = (item, all) => {
+      const host = $("#lab-feature");
+      if (!item || !host) return;
+      const card = el("button", { class: "feature", type: "button", "aria-label": `Play ${item.title}` },
+        el("div", { class: "feature__media" },
+          el("img", { src: item.poster || item.src, alt: "", loading: "lazy" }),
+          item.type === "video" ? el("video", { muted: true, loop: true, playsinline: true, preload: "none" }) : null
+        ),
+        el("div", { class: "feature__body" },
+          el("span", { class: "feature__badge mono", text: "Now showing" }),
+          el("h3", { class: "feature__title", text: item.title }),
+          item.description ? el("p", { class: "feature__desc", text: item.description }) : null,
+          chips(item)
+        ),
+        el("span", { class: "feature__play", html: ICONS.play })
+      );
+      const v = $("video", card);
+      if (v) v.muted = true;
+      card.addEventListener("click", () => openTheater(all, all.indexOf(item), card));
+      attachPreview(card, item);
+      host.replaceChildren(card);
+    };
+
+    const renderGrid = (items) => {
+      labGrid.replaceChildren(...items.map((item, n) => {
+        const isVideo = item.type === "video";
+        const card = el("button", {
+          class: `lab-card${isVideo ? " lab-card--video" : ""}`,
+          type: "button",
+          style: `--n:${n}`,
+          "aria-label": `${isVideo ? "Play" : "View"} ${item.title}`
+        },
+          el("div", { class: "lab-card__media" },
+            el("img", { src: item.poster || item.src, alt: "", loading: "lazy", decoding: "async" }),
+            isVideo ? el("video", { muted: true, loop: true, playsinline: true, preload: "none" }) : null
+          ),
+          el("span", { class: "lab-card__shade" }),
+          el("div", { class: "lab-card__top" },
+            el("span", { class: "lab-card__cat", text: (item.categories || [])[0] || "" }),
+            isVideo && item.duration ? el("span", { class: "lab-card__time", html: ICONS.clock }, item.duration) : null
+          ),
+          isVideo ? el("span", { class: "lab-card__play", html: ICONS.play }) : el("span", { class: "lab-card__zoom", html: ICONS.zoom }),
+          el("div", { class: "lab-card__body" },
+            el("h3", { class: "lab-card__title", text: item.title }),
+            item.description ? el("p", { class: "lab-card__desc", text: item.description }) : null
+          )
+        );
+        const v = $("video", card);
+        if (v) v.muted = true;
+        card.addEventListener("click", () => openTheater(items, n, card));
+        attachPreview(card, item);
+        if (canHover) spotlight(card);
+        return card;
+      }));
+      $("#lab-empty").hidden = items.length > 0;
+    };
+
+    fetch("./data/lab.json", { cache: "no-cache" })
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then(({ items = [] }) => {
+        const videos = items.filter((i) => i.type === "video");
+        const images = items.filter((i) => i.type === "image");
+        const minutes = Math.round(videos.reduce((s, v) => s + toSeconds(v.duration), 0) / 60);
+
+        const stats = $("#lab-stats");
+        stats.replaceChildren(
+          ...[["Videos", videos.length], ["Artworks", images.length], ["Minutes", minutes]]
+            .filter(([, n]) => n > 0)
+            .map(([label, n]) => el("div", {}, el("dt", { text: label }), el("dd", { text: String(n) })))
+        );
+
+        renderFeature(items.find((i) => i.featured) || videos[0], items);
+
+        const filters = $$(".lab-filter");
+        const matches = (f) => (f === "all" ? items : items.filter((i) => (i.categories || []).includes(f)));
+        filters.forEach((btn) => {
+          $("span", btn).textContent = String(matches(btn.dataset.filter).length).padStart(2, "0");
+          btn.addEventListener("click", () => {
+            filters.forEach((b) => {
+              b.classList.toggle("is-active", b === btn);
+              b.setAttribute("aria-pressed", String(b === btn));
+            });
+            renderGrid(matches(btn.dataset.filter));
+          });
+        });
+        renderGrid(items);
+      })
+      .catch(() => {
+        $("#lab-empty").hidden = false;
+      });
+  }
+
   // Top posts: swap cards that have a post URL for the official X embed
   const postCards = $$(".post[data-post]").filter((card) => card.dataset.post.trim());
   if (postCards.length) {
