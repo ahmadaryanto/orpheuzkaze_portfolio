@@ -8,7 +8,7 @@
       name="description"
       content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Orpheuzkaze" />
     <meta name="theme-color" content="#08080a" />
     <link rel="canonical" href="https://orpheuzkaze-portfolio.vercel.app/profile.html" />
@@ -23,8 +23,11 @@
       content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
     <meta property="og:url" content="https://orpheuzkaze-portfolio.vercel.app/profile.html" />
-    <meta property="og:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
-    <meta property="og:image:alt" content="Orpheuzkaze profile picture" />
+    <meta property="og:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="About Orpheuzkaze: Web3 growth, community & AI creative" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@orpheuskaze" />
     <meta name="twitter:title" content="About Orpheuzkaze" />
@@ -32,15 +35,51 @@
       name="twitter:description"
       content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
-    <meta name="twitter:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
+    <meta name="twitter:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/og-image.jpg" />
+    <meta name="twitter:image:alt" content="About Orpheuzkaze: Web3 growth, community & AI creative" />
+    <meta name="twitter:creator" content="@orpheuskaze" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./portfolio.css?v=20261014" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+    <link rel="stylesheet" href="./portfolio.css?v=20261014-2" />
     <script>document.documentElement.classList.add("js");</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://orpheuzkaze-portfolio.vercel.app/#person",
+            "name": "Orpheuzkaze",
+            "alternateName": "orpheuskaze",
+            "url": "https://orpheuzkaze-portfolio.vercel.app/",
+            "image": "https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp",
+            "jobTitle": "Web3 Growth, Community & Partnerships Specialist",
+            "description": "Web3 growth, community, moderation, and partnerships specialist with an AI creative edge. Based in Indonesia, open to freelance.",
+            "address": { "@type": "PostalAddress", "addressCountry": "ID" },
+            "knowsLanguage": ["en", "id"],
+            "knowsAbout": ["Web3 growth", "Community management", "Partnerships", "KOL marketing", "Discord moderation", "AI video", "AI agents"],
+            "email": "mailto:orpheuzkaze@gmail.com",
+            "sameAs": ["https://x.com/orpheuskaze", "https://t.me/orpheuzkaze", "https://github.com/ahmadaryanto"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://orpheuzkaze-portfolio.vercel.app/#website",
+            "url": "https://orpheuzkaze-portfolio.vercel.app/",
+            "name": "Orpheuzkaze Portfolio",
+            "publisher": { "@id": "https://orpheuzkaze-portfolio.vercel.app/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "url": "https://orpheuzkaze-portfolio.vercel.app/profile.html",
+            "isPartOf": { "@id": "https://orpheuzkaze-portfolio.vercel.app/#website" },
+            "about": { "@id": "https://orpheuzkaze-portfolio.vercel.app/#person" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -54,8 +93,8 @@
 
     <header class="header">
       <div class="wrap header__inner">
-        <a class="logo" href="./index.html" aria-label="Orpheuzkaze, home">
-          <span class="logo__mark">O</span>
+        <a class="logo" href="./index.html">
+          <span class="logo__mark" aria-hidden="true">O</span>
           <span class="logo__text">ORPHEUZKAZE</span>
         </a>
         <nav class="nav" id="nav" aria-label="Primary">
@@ -66,6 +105,12 @@
           <a href="./index.html#achievements">Achievements</a>
           <a href="./index.html#projects">Projects</a>
           <a href="./index.html#contact" class="nav__cta">Let's talk</a>
+          <ul class="nav__socials">
+            <li><a href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer me" aria-label="X (@orpheuskaze)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+            <li><a href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer me" aria-label="Telegram (@orpheuzkaze)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a></li>
+            <li><a href="https://github.com/ahmadaryanto" target="_blank" rel="noreferrer me" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+            <li><a href="mailto:orpheuzkaze@gmail.com" aria-label="Email orpheuzkaze@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a></li>
+          </ul>
         </nav>
         <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
           <span></span><span></span>
@@ -131,7 +176,7 @@
           <div class="subhero__media" data-reveal>
             <figure class="portrait">
               <div class="portrait__frame">
-                <img src="./assets/profile-picture.webp" alt="Orpheuzkaze profile picture" width="600" height="600" />
+                <img src="./assets/profile-picture.webp" srcset="./assets/profile-picture-480.webp 480w, ./assets/profile-picture.webp 880w" sizes="(max-width: 900px) 280px, 420px" alt="Orpheuzkaze profile picture" width="880" height="1174" />
               </div>
               <figcaption class="portrait__tag">
                 <span class="mono">Based in</span>
@@ -154,7 +199,7 @@
           <div class="interests">
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/gamer.jpg" alt="Gamer illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/gamer.webp" alt="Gamer illustration" loading="lazy" /></span>
                 <span class="interest__title">Gamer</span>
                 <span class="interest__short">A dedicated PC gamer with a love for both competitive and casual play</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -164,7 +209,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/music-lover.jpg" alt="Music lover illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/music-lover.webp" alt="Music lover illustration" loading="lazy" /></span>
                 <span class="interest__title">Music Lover</span>
                 <span class="interest__short">An enthusiast of R&amp;B and Indonesian hip-hop</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -174,7 +219,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/singing.jpg" alt="Singing illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/singing.webp" alt="Singing illustration" loading="lazy" /></span>
                 <span class="interest__title">Singing</span>
                 <span class="interest__short">Music as a meaningful emotional outlet</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -184,7 +229,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/watching-movies-series.jpg" alt="Watching movies and series illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/watching-movies-series.webp" alt="Watching movies and series illustration" loading="lazy" /></span>
                 <span class="interest__title">Watching Movies / Series</span>
                 <span class="interest__short">A genuine appreciation for stories, culture, and language</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -194,7 +239,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/family-first.jpg" alt="Family first illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/family-first.webp" alt="Family first illustration" loading="lazy" /></span>
                 <span class="interest__title">Family First</span>
                 <span class="interest__short">Family is my greatest priority</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -204,7 +249,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/ai-agents-workflows.jpg" alt="AI agents and workflows illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/ai-agents-workflows.webp" alt="AI agents and workflows illustration" loading="lazy" /></span>
                 <span class="interest__title">AI Agents &amp; Workflows</span>
                 <span class="interest__short">A thoughtful interest in agentic systems</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -214,7 +259,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/cat-lover.jpg" alt="Cat lover illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/cat-lover.webp" alt="Cat lover illustration" loading="lazy" /></span>
                 <span class="interest__title">Cat Lover</span>
                 <span class="interest__short">A lifelong appreciation for cats</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -224,7 +269,7 @@
 
             <details class="interest" data-reveal>
               <summary>
-                <span class="interest__img"><img src="./assets/get-to-know/milestone.jpg" alt="Milestone illustration" loading="lazy" /></span>
+                <span class="interest__img"><img src="./assets/get-to-know/milestone.webp" alt="Milestone illustration" loading="lazy" /></span>
                 <span class="interest__title">Early Milestone</span>
                 <span class="interest__short">A milestone shaped by discipline and consistency</span>
                 <span class="interest__toggle mono">Read more</span>
@@ -247,6 +292,24 @@
     <footer class="footer">
       <div class="wrap footer__inner">
         <p class="footer__big" aria-hidden="true">ORPHEUZKAZE</p>
+        <div class="footer__grid">
+          <nav class="footer__nav" aria-label="Footer">
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#x-profile">X</a>
+            <a href="./index.html#top-posts">Posts</a>
+            <a href="./index.html#lab">AI Lab</a>
+            <a href="./index.html#experience">Experience</a>
+            <a href="./index.html#achievements">Achievements</a>
+            <a href="./index.html#projects">Projects</a>
+            <a href="./profile.html">More about me</a>
+          </nav>
+          <ul class="footer__socials">
+            <li><a href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer me" aria-label="X (@orpheuskaze)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+            <li><a href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer me" aria-label="Telegram (@orpheuzkaze)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a></li>
+            <li><a href="https://github.com/ahmadaryanto" target="_blank" rel="noreferrer me" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+            <li><a href="mailto:orpheuzkaze@gmail.com" aria-label="Email orpheuzkaze@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a></li>
+          </ul>
+        </div>
         <div class="footer__row">
           <p>&copy; <span id="year">2026</span> Orpheuzkaze. Web3 · Community · AI.</p>
           <a href="#main" class="mono">Back to top ↑</a>
@@ -254,6 +317,6 @@
       </div>
     </footer>
 
-    <script src="./portfolio.js?v=20261014" defer></script>
+    <script src="./portfolio.js?v=20261014-2" defer></script>
   </body>
 </html>
