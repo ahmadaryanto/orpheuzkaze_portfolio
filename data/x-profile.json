@@ -1,0 +1,22 @@
+{
+  "_readme": "Source of truth for the X profile section. Edit by hand (manual import) or refresh with `node scripts/fetch-x-profile.mjs` (official X API). Use null for anything unknown: it is hidden on the site, never guessed.",
+  "username": "orpheuskaze",
+  "displayName": "orpheuzkaze | Crypto & AI",
+  "profileUrl": "https://x.com/orpheuskaze",
+  "avatar": "./assets/x/avatar.jpg",
+  "banner": "./assets/x/banner.webp",
+  "bio": null,
+  "location": null,
+  "website": null,
+  "verified": null,
+  "followers": "21.5K",
+  "following": null,
+  "posts": "29.7K",
+  "joined": "April 2025",
+  "interests": ["Crypto", "AI"],
+  "source": {
+    "method": "X public link-preview metadata (og/twitter meta tags on x.com/orpheuskaze)",
+    "fetchedAt": "2026-10-14",
+    "notes": "Followers (21.5K) provided manually by the account owner on 2026-10-14. Bio and following count not yet available. Interests taken from the display name."
+  }
+}

@@ -127,6 +127,55 @@
     counters.forEach((el) => counterObserver.observe(el));
   }
 
+  // X profile: hydrate from data/x-profile.json. Null fields stay hidden.
+  const xCard = $(".xcard");
+  if (xCard && window.fetch) {
+    const compact = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
+    const fmt = (v) => (typeof v === "number" ? compact.format(v) : String(v));
+    const has = (v) => v !== null && v !== undefined && v !== "";
+    const field = (name) => $(`[data-x="${name}"]`, xCard);
+
+    fetch("./data/x-profile.json", { cache: "no-cache" })
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then((x) => {
+        ["displayName", "username", "joined"].forEach((k) => {
+          if (has(x[k]) && field(k)) field(k).textContent = x[k];
+        });
+        if (has(x.avatar)) field("avatar").src = x.avatar;
+        if (has(x.banner)) field("banner").src = x.banner;
+        if (has(x.username)) field("follow").href = `https://x.com/intent/follow?screen_name=${encodeURIComponent(x.username)}`;
+        field("verified").hidden = x.verified !== true;
+
+        const bio = field("bio");
+        bio.hidden = !has(x.bio);
+        if (has(x.bio)) bio.textContent = x.bio;
+
+        const loc = field("location");
+        loc.hidden = !has(x.location);
+        if (has(x.location)) loc.textContent = x.location;
+
+        const site = field("website");
+        site.hidden = !has(x.website);
+        if (has(x.website)) {
+          const a = document.createElement("a");
+          a.href = x.website;
+          a.target = "_blank";
+          a.rel = "noreferrer";
+          a.textContent = x.website.replace(/^https?:\/\//, "").replace(/\/$/, "");
+          site.replaceChildren(a);
+        }
+
+        ["posts", "following", "followers"].forEach((k) => {
+          const stat = $(`[data-x-stat="${k}"]`, xCard);
+          stat.hidden = !has(x[k]);
+          if (has(x[k])) field(k).textContent = fmt(x[k]);
+        });
+      })
+      .catch(() => {
+        /* keep the server-rendered values */
+      });
+  }
+
   // Top posts: swap cards that have a post URL for the official X embed
   const postCards = $$(".post[data-post]").filter((card) => card.dataset.post.trim());
   if (postCards.length) {

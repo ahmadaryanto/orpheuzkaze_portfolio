@@ -527,23 +527,12 @@ em {
   box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.8);
 }
 .xcard__banner {
-  height: 150px;
-  background:
-    radial-gradient(circle at 20% 120%, rgba(214, 255, 61, 0.55), transparent 50%),
-    radial-gradient(circle at 85% -20%, rgba(155, 123, 255, 0.8), transparent 55%),
-    linear-gradient(120deg, #14141a, #1d1b2b);
   position: relative;
+  aspect-ratio: 3 / 1;
+  overflow: hidden;
+  background: linear-gradient(120deg, #14141a, #1d1b2b);
 }
-.xcard__banner::after {
-  content: "ORPHEUZKAZE";
-  position: absolute;
-  right: 20px;
-  bottom: 14px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.5);
-}
+.xcard__banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .xcard__body { padding: 0 28px 28px; }
 .xcard__top { display: flex; justify-content: space-between; align-items: flex-end; margin-top: -48px; }
 .xcard__avatar { position: relative; z-index: 1; width: 96px; height: 96px; border-radius: 50%; border: 4px solid var(--surface); object-fit: cover; background: var(--surface-2); }
@@ -554,6 +543,17 @@ em {
 .xcard__meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; color: var(--muted); font-size: 0.88rem; }
 .xcard__meta li { display: inline-flex; align-items: center; gap: 6px; }
 .xcard__meta svg { width: 16px; height: 16px; }
+.xcard__meta a { color: var(--accent); }
+.xcard__top .btn svg { width: 15px; height: 15px; }
+.xcard__top .btn:hover svg { transform: none; }
+.xcard__stats { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 16px; font-size: 0.92rem; }
+.xcard__stats > div { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 5px; }
+.xcard__stats dd { font-weight: 700; color: var(--text); }
+.xcard__stats dt { color: var(--muted); }
+[hidden] { display: none !important; }
+.xtopics__intro strong { font-weight: 600; }
+.xtopics__intro em { color: var(--accent); }
+.xtopics__label { color: var(--dim); margin-bottom: 4px; font-weight: 400; }
 
 .xtopics__intro { font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.45; letter-spacing: -0.01em; margin-bottom: 32px; }
 .topic-list { border-top: 1px solid var(--line); }
@@ -1143,3 +1143,6 @@ a.repo:hover { border-color: var(--line-2); transform: translateY(-4px); }
   .interest__short { font-size: 0.85rem; }
   .pill { flex: 1 1 100%; justify-content: center; }
 }
+
+.inline-link { color: var(--text); border-bottom: 1px solid var(--line-2); transition: color 0.2s, border-color 0.2s; }
+.inline-link:hover { color: var(--accent); border-color: var(--accent); }
