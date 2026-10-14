@@ -11,10 +11,17 @@
   const header = $(".header");
   const progress = $(".progress");
   let ticking = false;
+  let lastY = window.scrollY;
   const onScroll = () => {
     ticking = false;
     const y = window.scrollY;
     header?.classList.toggle("is-scrolled", y > 24);
+    if (header && !document.body.classList.contains("is-locked")) {
+      const delta = y - lastY;
+      if (y < 120 || delta < -6) header.classList.remove("is-hidden");
+      else if (delta > 6) header.classList.add("is-hidden");
+    }
+    lastY = y;
     if (progress) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
@@ -186,6 +193,7 @@
       close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
       prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
       arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     };
     const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -313,7 +321,7 @@
     const renderFeature = (item, all) => {
       const host = $("#lab-feature");
       if (!item || !host) return;
-      const card = el("button", { class: "feature", type: "button", "aria-label": `Play ${item.title}` },
+      const card = el("button", { class: "feature", type: "button" },
         el("div", { class: "feature__media" },
           el("img", { src: item.poster || item.src, alt: "", loading: "lazy" }),
           item.type === "video" ? el("video", { muted: true, loop: true, playsinline: true, preload: "none" }) : null
@@ -339,8 +347,7 @@
         const card = el("button", {
           class: `lab-card${isVideo ? " lab-card--video" : ""}`,
           type: "button",
-          style: `--n:${n}`,
-          "aria-label": `${isVideo ? "Play" : "View"} ${item.title}`
+          style: `--n:${n}`
         },
           el("div", { class: "lab-card__media" },
             el("img", { src: item.poster || item.src, alt: "", loading: "lazy", decoding: "async" }),
@@ -365,6 +372,71 @@
         return card;
       }));
       $("#lab-empty").hidden = items.length > 0;
+    };
+
+    // "Made for X" rail: horizontally scrolling video cards that open the theater.
+    const rail = $("#posts-rail");
+    const renderRail = (posts) => {
+      if (!rail || !posts.length) return;
+      rail.replaceChildren(...posts.map((item, n) => {
+        const card = el("button", { class: "post-card", type: "button" },
+          el("div", { class: "post-card__media" },
+            el("img", { src: item.poster || item.src, alt: "", loading: "lazy", decoding: "async" }),
+            el("video", { muted: true, loop: true, playsinline: true, preload: "none" }),
+            el("span", { class: "lab-card__play", html: ICONS.play })
+          ),
+          el("div", { class: "post-card__meta" },
+            el("span", { class: "post-card__handle mono", html: ICONS.x }, "@orpheuskaze"),
+            item.duration ? el("span", { class: "mono post-card__time" }, item.duration) : null
+          ),
+          el("h3", { class: "post-card__title", text: item.title }),
+          item.language ? el("span", { class: "post-card__lang mono", text: item.language }) : null
+        );
+        const v = $("video", card);
+        v.muted = true;
+        card.addEventListener("click", () => {
+          if (rail.dataset.dragged === "1") return;
+          openTheater(posts, n, card);
+        });
+        attachPreview(card, item);
+        return card;
+      }));
+
+      const step = () => (rail.firstElementChild?.getBoundingClientRect().width || 320) + 16;
+      $$("[data-rail]").forEach((btn) => btn.addEventListener("click", () => {
+        rail.scrollBy({ left: btn.dataset.rail === "next" ? step() : -step(), behavior: reduceMotion ? "auto" : "smooth" });
+      }));
+      const syncButtons = () => {
+        const max = rail.scrollWidth - rail.clientWidth - 4;
+        $$("[data-rail]").forEach((btn) => {
+          btn.disabled = btn.dataset.rail === "prev" ? rail.scrollLeft <= 4 : rail.scrollLeft >= max;
+        });
+      };
+      rail.addEventListener("scroll", syncButtons, { passive: true });
+      window.addEventListener("resize", syncButtons);
+      syncButtons();
+
+      // Drag to scroll with a mouse; touch uses native scrolling.
+      let down = false, startX = 0, startLeft = 0;
+      rail.addEventListener("pointerdown", (e) => {
+        if (e.pointerType !== "mouse") return;
+        down = true; startX = e.clientX; startLeft = rail.scrollLeft; rail.dataset.dragged = "0";
+      });
+      window.addEventListener("pointermove", (e) => {
+        if (!down) return;
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 6) { rail.dataset.dragged = "1"; rail.classList.add("is-dragging"); }
+        rail.scrollLeft = startLeft - dx;
+      });
+      window.addEventListener("pointerup", () => {
+        down = false;
+        rail.classList.remove("is-dragging");
+        setTimeout(() => { rail.dataset.dragged = "0"; }, 0);
+      });
+      rail.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") { e.preventDefault(); rail.scrollBy({ left: step(), behavior: "smooth" }); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); rail.scrollBy({ left: -step(), behavior: "smooth" }); }
+      });
     };
 
     fetch("./data/lab.json", { cache: "no-cache" })
@@ -396,24 +468,30 @@
           });
         });
         renderGrid(items);
+        renderRail(items.filter((i) => i.id.startsWith("x-")));
       })
       .catch(() => {
         $("#lab-empty").hidden = false;
       });
   }
 
-  // Top posts: swap cards that have a post URL for the official X embed
-  const postCards = $$(".post[data-post]").filter((card) => card.dataset.post.trim());
-  if (postCards.length) {
-    postCards.forEach((card) => {
-      const url = card.dataset.post.trim().replace("://x.com/", "://twitter.com/");
-      card.classList.add("post--embed");
-      card.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true"><a href="${url}"></a></blockquote>`;
+  // Project cards: play the demo clip on hover (desktop only).
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches && !reduceMotion) {
+    $$(".repo-card__media[data-preview]").forEach((media) => {
+      let video = null;
+      media.addEventListener("mouseenter", () => {
+        if (!video) {
+          video = document.createElement("video");
+          Object.assign(video, { src: media.dataset.preview, muted: true, loop: true, playsInline: true });
+          media.appendChild(video);
+        }
+        video.play().then(() => media.classList.add("is-previewing")).catch(() => {});
+      });
+      media.addEventListener("mouseleave", () => {
+        media.classList.remove("is-previewing");
+        video?.pause();
+      });
     });
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    document.body.appendChild(script);
   }
 
   // Lightbox for gallery images

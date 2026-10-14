@@ -1,0 +1,5 @@
+# Local tooling and backups: not part of the site
+scraped/
+scripts/
+*.ps1
+README.md
