@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,11 @@
     <title>About Orpheuzkaze</title>
     <meta
       name="description"
-      content="Learn more about Orpheuzkaze — background, focus areas, and professional approach."
+      content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Orpheuzkaze" />
+    <meta name="theme-color" content="#08080a" />
     <link rel="canonical" href="https://orpheuzkaze-portfolio.vercel.app/profile.html" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32" />
@@ -19,224 +20,240 @@
     <meta property="og:title" content="About Orpheuzkaze" />
     <meta
       property="og:description"
-      content="Learn more about Orpheuzkaze — background, focus areas, and professional approach."
+      content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
     <meta property="og:url" content="https://orpheuzkaze-portfolio.vercel.app/profile.html" />
     <meta property="og:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
     <meta property="og:image:alt" content="Orpheuzkaze profile picture" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@orpheuskaze" />
     <meta name="twitter:title" content="About Orpheuzkaze" />
     <meta
       name="twitter:description"
-      content="Learn more about Orpheuzkaze — background, focus areas, and professional approach."
+      content="Learn more about Orpheuzkaze: background, focus areas, and professional approach."
     />
     <meta name="twitter:image" content="https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260622" />
-    <link rel="stylesheet" href="./enhancements.css?v=20260622" />
+    <link rel="stylesheet" href="./portfolio.css?v=20261014" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="ambient" aria-hidden="true">
-      <div class="ambient__orb ambient__orb--1"></div>
-      <div class="ambient__orb ambient__orb--2"></div>
-      <div class="ambient__orb ambient__orb--3"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__noise"></div>
     </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./index.html">ORPHEUZKAZE</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav">
-          <a href="./index.html#profile">Profile</a>
-          <a href="./index.html#freelance">Current Work</a>
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="logo" href="./index.html" aria-label="Orpheuzkaze, home">
+          <span class="logo__mark">O</span>
+          <span class="logo__text">ORPHEUZKAZE</span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Primary">
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#x-profile">X</a>
+          <a href="./index.html#lab">AI Lab</a>
           <a href="./index.html#experience">Experience</a>
-          <a href="./index.html#skills">Skills</a>
-          <a href="./index.html#kpis">Results</a>
-          <a href="./index.html#contact">Contact</a>
+          <a href="./index.html#achievements">Achievements</a>
+          <a href="./index.html#projects">Projects</a>
+          <a href="./index.html#contact" class="nav__cta">Let's talk</a>
         </nav>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
       </div>
     </header>
 
-    <main class="subpage-main">
-      <section class="section">
-        <div class="container profile-page-grid">
-          <div class="profile-copy">
-            <p class="eyebrow">About Me</p>
-            <h1 class="subpage-title"><span class="text-gradient">Orpheuzkaze</span></h1>
-            <p class="profile-lead">
+    <main id="main">
+      <!-- About me -->
+      <section class="subhero">
+        <div class="wrap subhero__grid">
+          <div class="subhero__copy">
+            <a class="back-link mono" href="./index.html" data-reveal>← Back to portfolio</a>
+            <p class="eyebrow" data-reveal>About Me</p>
+            <h1 class="subhero__title" data-reveal>Orpheuz<em>kaze</em></h1>
+            <p class="about__lead" data-reveal>
               Growth Manager, Community Manager, Moderator, and Partnership
               specialist focused on helping Web3 projects move from initial
               attention to sustained community traction.
             </p>
-            <p class="body-text">
-              With a background in Information Technology, I have built my career
-              around community building, digital growth, campaign execution, and
-              ecosystem partnerships within Web3.
-            </p>
-            <p class="body-text">
-              In recent years, I have worked across AI, gaming, NFT, and blockchain
-              projects, supporting growth through social media, go-to-market planning,
-              collaborations, AMAs, offline events, and user acquisition strategy.
-            </p>
-            <p class="body-text">
-              My approach is grounded in practical execution: building the right
-              partnerships, strengthening community momentum, improving visibility,
-              and helping projects turn interest into active, engaged users.
-            </p>
-            <p class="body-text">
-              I am also currently available for freelance engagements across growth,
-              community, and partnership work. Those projects are ongoing, and I keep
-              client details private unless agreed otherwise.
-            </p>
+            <div class="subhero__body">
+              <p data-reveal>
+                With a background in Information Technology, I have built my career
+                around community building, digital growth, campaign execution, and
+                ecosystem partnerships within Web3.
+              </p>
+              <p data-reveal>
+                In recent years, I have worked across AI, gaming, NFT, and blockchain
+                projects, supporting growth through social media, go-to-market planning,
+                collaborations, AMAs, offline events, and user acquisition strategy.
+              </p>
+              <p data-reveal>
+                My approach is grounded in practical execution: building the right
+                partnerships, strengthening community momentum, improving visibility,
+                and helping projects turn interest into active, engaged users.
+              </p>
+              <aside class="note" data-reveal>
+                <span class="note__label mono">Freelance</span>
+                <p>
+                  I am also currently available for freelance engagements across growth,
+                  community, and partnership work. Those projects are ongoing, and I keep
+                  client details private unless agreed otherwise.
+                </p>
+              </aside>
+            </div>
 
-            <div class="contact-row">
-              <a href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer" class="social-link">
-                <span class="social-icon social-icon-telegram" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path>
-                  </svg>
-                </span>
-                <span>@orpheuzkaze</span>
+            <div class="pills" data-reveal>
+              <a class="pill" href="https://t.me/orpheuzkaze" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                @orpheuzkaze
               </a>
-              <a href="mailto:orpheuzkaze@gmail.com" class="social-link">
-                <span class="social-icon social-icon-email" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                    <path d="M2 7l10 7 10-7"></path>
-                  </svg>
-                </span>
-                <span>orpheuzkaze@gmail.com</span>
+              <a class="pill" href="mailto:orpheuzkaze@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                orpheuzkaze@gmail.com
               </a>
-              <a href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer" class="social-link">
-                <img src="./assets/x-logo-icon.png" alt="" class="social-icon-image" aria-hidden="true" />
-                <span>X / Twitter</span>
+              <a class="pill" href="https://x.com/orpheuskaze" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                X / Twitter
               </a>
             </div>
+          </div>
+
+          <div class="subhero__media" data-reveal>
+            <figure class="portrait">
+              <div class="portrait__frame">
+                <img src="./assets/profile-picture.webp" alt="Orpheuzkaze profile picture" width="600" height="600" />
+              </div>
+              <figcaption class="portrait__tag">
+                <span class="mono">Based in</span>
+                <strong>Indonesia</strong>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <p class="eyebrow">Get To Know Me</p>
-          <p class="experience-summary">A few personal interests that shape how I work and connect with others.</p>
+      <!-- Get to know me -->
+      <section class="section section--tint" id="get-to-know">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <p class="eyebrow">Get To Know Me</p>
+            <h2 class="section__title">Beyond <em>the work.</em></h2>
+            <p class="section__sub">A few personal interests that shape how I work and connect with others.</p>
+          </header>
 
-          <div class="beyond-grid">
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/gamer.jpg" alt="Gamer illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Gamer</span>
-                <span class="beyond-card__short">A dedicated PC gamer with a love for both competitive and casual play</span>
-                <span class="beyond-card__toggle">Read more</span>
+          <div class="interests">
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/gamer.jpg" alt="Gamer illustration" loading="lazy" /></span>
+                <span class="interest__title">Gamer</span>
+                <span class="interest__short">A dedicated PC gamer with a love for both competitive and casual play</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">I have been a PC gamer for many years and still make time for a good session whenever I can. While I enjoy a wide range of games, Dota 2 remains a personal favorite. Gaming helps me stay sharp in strategy, patience, and focus under pressure.</p>
+              <p class="interest__detail">I have been a PC gamer for many years and still make time for a good session whenever I can. While I enjoy a wide range of games, Dota 2 remains a personal favorite. Gaming helps me stay sharp in strategy, patience, and focus under pressure.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/music-lover.jpg" alt="Music lover illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Music Lover</span>
-                <span class="beyond-card__short">An enthusiast of R&amp;B and Indonesian hip-hop</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/music-lover.jpg" alt="Music lover illustration" loading="lazy" /></span>
+                <span class="interest__title">Music Lover</span>
+                <span class="interest__short">An enthusiast of R&amp;B and Indonesian hip-hop</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">My playlist is a thoughtful mix of R&amp;B and Indonesian hip-hop. Music helps me stay focused during work and brings positive energy to my time outside of it.</p>
+              <p class="interest__detail">My playlist is a thoughtful mix of R&amp;B and Indonesian hip-hop. Music helps me stay focused during work and brings positive energy to my time outside of it.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/singing.jpg" alt="Singing illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Singing</span>
-                <span class="beyond-card__short">Music as a meaningful emotional outlet</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/singing.jpg" alt="Singing illustration" loading="lazy" /></span>
+                <span class="interest__title">Singing</span>
+                <span class="interest__short">Music as a meaningful emotional outlet</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">Singing is one of the most natural ways for me to release stress and reset my mindset. It keeps me grounded and helps me maintain balance in both work and life.</p>
+              <p class="interest__detail">Singing is one of the most natural ways for me to release stress and reset my mindset. It keeps me grounded and helps me maintain balance in both work and life.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/watching-movies-series.jpg" alt="Watching movies and series illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Watching Movies / Series</span>
-                <span class="beyond-card__short">A genuine appreciation for stories, culture, and language</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/watching-movies-series.jpg" alt="Watching movies and series illustration" loading="lazy" /></span>
+                <span class="interest__title">Watching Movies / Series</span>
+                <span class="interest__short">A genuine appreciation for stories, culture, and language</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">Films and series allow me to unwind while deepening my appreciation for different cultures and languages. My all-time favorite movie is Interstellar, and my favorite anime is Shingeki no Kyojin.</p>
+              <p class="interest__detail">Films and series allow me to unwind while deepening my appreciation for different cultures and languages. My all-time favorite movie is Interstellar, and my favorite anime is Shingeki no Kyojin.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/family-first.jpg" alt="Family first illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Family First</span>
-                <span class="beyond-card__short">Family is my greatest priority</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/family-first.jpg" alt="Family first illustration" loading="lazy" /></span>
+                <span class="interest__title">Family First</span>
+                <span class="interest__short">Family is my greatest priority</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">Family always comes first. Time with the people closest to me keeps me grounded, gives me purpose, and reminds me of what matters most beyond professional life.</p>
+              <p class="interest__detail">Family always comes first. Time with the people closest to me keeps me grounded, gives me purpose, and reminds me of what matters most beyond professional life.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/ai-agents-workflows.jpg" alt="AI agents and workflows illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">AI Agents &amp; Workflows</span>
-                <span class="beyond-card__short">A thoughtful interest in agentic systems</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/ai-agents-workflows.jpg" alt="AI agents and workflows illustration" loading="lazy" /></span>
+                <span class="interest__title">AI Agents &amp; Workflows</span>
+                <span class="interest__short">A thoughtful interest in agentic systems</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">I follow developments in AI agents, agentic workflows, and automation with genuine interest. I enjoy exploring how these systems can support more efficient and effective execution.</p>
+              <p class="interest__detail">I follow developments in AI agents, agentic workflows, and automation with genuine interest. I enjoy exploring how these systems can support more efficient and effective execution.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/cat-lover.jpg" alt="Cat lover illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Cat Lover</span>
-                <span class="beyond-card__short">A lifelong appreciation for cats</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/cat-lover.jpg" alt="Cat lover illustration" loading="lazy" /></span>
+                <span class="interest__title">Cat Lover</span>
+                <span class="interest__short">A lifelong appreciation for cats</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">I have always had a deep fondness for cats. They bring calm energy, personality, and a quiet sense of comfort that makes everyday life feel a little lighter.</p>
+              <p class="interest__detail">I have always had a deep fondness for cats. They bring calm energy, personality, and a quiet sense of comfort that makes everyday life feel a little lighter.</p>
             </details>
 
-            <details class="beyond-card">
-              <summary class="beyond-card__summary">
-                <span class="beyond-card__image-wrap">
-                  <img src="./assets/get-to-know/milestone.jpg" alt="Milestone illustration" class="beyond-card__image" loading="lazy" />
-                </span>
-                <span class="beyond-card__title">Early Milestone</span>
-                <span class="beyond-card__short">A milestone shaped by discipline and consistency</span>
-                <span class="beyond-card__toggle">Read more</span>
+            <details class="interest" data-reveal>
+              <summary>
+                <span class="interest__img"><img src="./assets/get-to-know/milestone.jpg" alt="Milestone illustration" loading="lazy" /></span>
+                <span class="interest__title">Early Milestone</span>
+                <span class="interest__short">A milestone shaped by discipline and consistency</span>
+                <span class="interest__toggle mono">Read more</span>
               </summary>
-              <p class="beyond-card__detail">An early financial milestone was meaningful not only in itself, but as a reflection of discipline, sacrifice, consistency, and building lasting security for my family.</p>
+              <p class="interest__detail">An early financial milestone was meaningful not only in itself, but as a reflection of discipline, sacrifice, consistency, and building lasting security for my family.</p>
             </details>
+          </div>
+
+          <div class="subpage-cta" data-reveal>
+            <a class="btn btn--primary" href="./index.html#contact">
+              Let's work together
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="./index.html#experience">View experience</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; Orpheuzkaze</p>
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p class="footer__big" aria-hidden="true">ORPHEUZKAZE</p>
+        <div class="footer__row">
+          <p>&copy; <span id="year">2026</span> Orpheuzkaze. Web3 · Community · AI.</p>
+          <a href="#main" class="mono">Back to top ↑</a>
+        </div>
       </div>
     </footer>
-    <script src="./site.js?v=20260622"></script>
+
+    <script src="./portfolio.js?v=20261014" defer></script>
   </body>
 </html>
