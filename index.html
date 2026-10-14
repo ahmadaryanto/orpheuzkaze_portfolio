@@ -383,59 +383,50 @@
       </section>
 
       <!-- ============ 05 · AI CREATIVE LAB ============ -->
+      <!--
+        Gallery content lives in data/lab.json and is rendered by portfolio.js.
+        To add work: drop files into assets/lab/videos/ or assets/lab/images/,
+        then add an entry to data/lab.json (see the _readme field there).
+      -->
       <section class="section section--lab" id="lab">
+        <div class="lab-ticker" aria-hidden="true">
+          <div class="lab-ticker__track">
+            <span>AI Videos ✦ Animation ✦ AI Art ✦ Experiments ✦&nbsp;</span>
+            <span>AI Videos ✦ Animation ✦ AI Art ✦ Experiments ✦&nbsp;</span>
+          </div>
+        </div>
+
         <div class="wrap">
-          <header class="section__head" data-reveal>
-            <span class="section__index">05</span>
-            <p class="eyebrow eyebrow--ai">AI Creative Lab</p>
-            <h2 class="section__title">Where growth meets <em>generative.</em></h2>
-            <p class="section__sub">
-              I follow AI agents, agentic workflows, and automation closely, and I keep testing
-              how they can make community and creative work faster and sharper.
-            </p>
+          <header class="section__head section__head--row lab__head" data-reveal>
+            <div>
+              <span class="section__index">05</span>
+              <p class="eyebrow eyebrow--ai">AI Creative Lab</p>
+              <h2 class="section__title">Where growth meets <em>generative.</em></h2>
+              <p class="section__sub">
+                AI-made videos, animated explainers, and AI art. I use AI tools to
+                make crypto easier to understand and to tell better stories for the
+                communities I work with.
+              </p>
+            </div>
+            <dl class="lab-stats" id="lab-stats"></dl>
           </header>
 
-          <div class="lab">
-            <figure class="lab__visual" data-reveal>
-              <img src="./assets/get-to-know/ai-agents-workflows.jpg" alt="AI agents and workflows" loading="lazy" />
-              <figcaption class="mono"><span class="pulse"></span> lab / active</figcaption>
-            </figure>
+          <div class="lab-feature" id="lab-feature" data-reveal></div>
 
-            <div class="lab__cards">
-              <article class="lab-card" data-reveal>
-                <div class="lab-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-                </div>
-                <h3>Agentic workflows</h3>
-                <p>Exploring AI agents for repetitive community ops such as reporting, collab tracking, and moderation triage, so more time goes to people.</p>
-                <span class="lab-card__tag mono">Exploring</span>
-              </article>
-              <article class="lab-card" data-reveal>
-                <div class="lab-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4zM14 6l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>AI-assisted content</h3>
-                <p>Drafting, ideation, and campaign assets with ChatGPT and Canva, with my own editorial judgment always on top.</p>
-                <span class="lab-card__tag mono">In use</span>
-              </article>
-              <article class="lab-card" data-reveal>
-                <div class="lab-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5v5l4.5-2.5L10 9.5z" fill="currentColor"/></svg>
-                </div>
-                <h3>Explainers &amp; visuals</h3>
-                <p>Short-form explainers and visuals that make Web3 concepts easier to understand for new community members.</p>
-                <span class="lab-card__tag mono">Experimenting</span>
-              </article>
-              <article class="lab-card" data-reveal>
-                <div class="lab-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Smarter reporting</h3>
-                <p>Turning social metrics and community insights into clear, repeatable reports for teams and partners.</p>
-                <span class="lab-card__tag mono">Exploring</span>
-              </article>
-            </div>
+          <div class="lab-filters" id="lab-filters" role="toolbar" aria-label="Filter creative work" data-reveal>
+            <button type="button" class="lab-filter is-active" data-filter="all" aria-pressed="true">All <span></span></button>
+            <button type="button" class="lab-filter" data-filter="AI Videos" aria-pressed="false">AI Videos <span></span></button>
+            <button type="button" class="lab-filter" data-filter="Animation" aria-pressed="false">Animation <span></span></button>
+            <button type="button" class="lab-filter" data-filter="AI Art" aria-pressed="false">AI Art <span></span></button>
+            <button type="button" class="lab-filter" data-filter="Experiments" aria-pressed="false">Experiments <span></span></button>
           </div>
+
+          <div class="lab-grid" id="lab-grid" aria-live="polite"></div>
+          <p class="lab-empty" id="lab-empty" hidden>
+            <span class="mono">In the lab</span>
+            New experiments are on the way. Check back soon.
+          </p>
+          <noscript><p class="lab-empty">Enable JavaScript to browse the AI Creative Lab gallery.</p></noscript>
         </div>
       </section>
 
