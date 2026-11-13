@@ -183,6 +183,17 @@
       });
   }
 
+  // Toast helper
+  const toast = $(".toast");
+  let toastTimer = 0;
+  const showToast = (msg) => {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("is-on"), 2200);
+  };
+
   // AI Creative Lab: gallery rendered from data/lab.json
   const labGrid = $("#lab-grid");
   if (labGrid && window.fetch) {
@@ -194,7 +205,8 @@
       prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
-      arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      share: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     };
     const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
@@ -216,6 +228,7 @@
     const chips = (item, withTools = true) => {
       const list = [];
       (item.categories || []).forEach((c) => list.push(el("li", { text: c })));
+      if (item.aspect === "9:16") list.push(el("li", { text: "9:16 Reel" }));
       if (item.language) list.push(el("li", { text: item.language }));
       if (withTools) (item.tools || []).forEach((t) => list.push(el("li", { class: "is-tool", text: t })));
       return list.length ? el("ul", { class: "chips-row" }, list) : null;
@@ -252,6 +265,7 @@
     const theater = el("div", { class: "theater", role: "dialog", "aria-modal": "true", "aria-label": "AI Creative Lab viewer" });
     const glow = el("div", { class: "theater__glow" });
     const count = el("span", { class: "theater__count" });
+    const shareBtn = el("button", { class: "theater__btn", type: "button", "aria-label": "Copy direct link to this item", title: "Copy direct link", html: ICONS.share });
     const closeBtn = el("button", { class: "theater__btn", type: "button", "aria-label": "Close viewer", html: ICONS.close });
     const prevBtn = el("button", { class: "theater__btn theater__btn--prev", type: "button", "aria-label": "Previous", html: ICONS.prev });
     const nextBtn = el("button", { class: "theater__btn theater__btn--next", type: "button", "aria-label": "Next", html: ICONS.next });
@@ -259,7 +273,7 @@
     const info = el("div", { class: "theater__info" });
     theater.append(
       glow,
-      el("div", { class: "theater__bar" }, count, closeBtn),
+      el("div", { class: "theater__bar" }, count, el("div", { class: "theater__actions" }, shareBtn, closeBtn)),
       el("div", { class: "theater__stage" }, prevBtn, frame, nextBtn),
       info
     );
@@ -278,13 +292,17 @@
       );
       glow.style.backgroundImage = `url("${item.poster || item.src}")`;
       count.textContent = `${String(theaterIndex + 1).padStart(2, "0")} / ${String(theaterList.length).padStart(2, "0")}`;
+      if (item.id && history.replaceState) {
+        history.replaceState(null, "", `#lab=${encodeURIComponent(item.id)}`);
+      }
+      const actionHref = item.link || (item.id && item.id.startsWith("x-") ? "https://x.com/orpheuskaze" : null);
+      const actionLabel = item.link ? (item.linkLabel || "View project") : "Follow @orpheuskaze";
       info.replaceChildren(...[
         el("h3", { text: item.title }),
         item.description ? el("p", { text: item.description }) : null,
         chips(item),
-        item.link ? el("a", { class: "btn btn--primary btn--sm theater__link", href: item.link, target: "_blank", rel: "noreferrer", html: `${item.linkLabel ? "" : "View project "}${ICONS.arrow}` }) : null
+        actionHref ? el("a", { class: "btn btn--primary btn--sm theater__link", href: actionHref, target: "_blank", rel: "noreferrer", html: `${actionLabel} ${ICONS.arrow}` }) : null
       ].filter(Boolean));
-      if (item.link && item.linkLabel) $(".theater__link", info).prepend(item.linkLabel + " ");
       const multi = theaterList.length > 1;
       prevBtn.hidden = !multi;
       nextBtn.hidden = !multi;
@@ -303,9 +321,23 @@
       theater.classList.remove("is-open");
       document.body.classList.remove("is-locked");
       stopMedia();
+      if (window.location.hash.startsWith("#lab=") && history.replaceState) {
+        history.replaceState(null, "", "#lab");
+      }
       theaterReturn?.focus();
     };
 
+    shareBtn.addEventListener("click", async () => {
+      const item = theaterList[theaterIndex];
+      if (!item) return;
+      const url = `${window.location.origin}${window.location.pathname}#lab=${encodeURIComponent(item.id)}`;
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast("Direct link copied");
+      } catch {
+        showToast("Link updated in address bar");
+      }
+    });
     closeBtn.addEventListener("click", closeTheater);
     prevBtn.addEventListener("click", () => showTheater(theaterIndex - 1));
     nextBtn.addEventListener("click", () => showTheater(theaterIndex + 1));
@@ -344,8 +376,9 @@
     const renderGrid = (items) => {
       labGrid.replaceChildren(...items.map((item, n) => {
         const isVideo = item.type === "video";
+        const isReel = item.aspect === "9:16";
         const card = el("button", {
-          class: `lab-card${isVideo ? " lab-card--video" : ""}`,
+          class: `lab-card${isVideo ? (isReel ? " lab-card--reel" : " lab-card--video") : ""}`,
           type: "button",
           style: `--n:${n}`
         },
@@ -355,7 +388,7 @@
           ),
           el("span", { class: "lab-card__shade" }),
           el("div", { class: "lab-card__top" },
-            el("span", { class: "lab-card__cat", text: (item.categories || [])[0] || "" }),
+            el("span", { class: "lab-card__cat", text: isReel ? "9:16 Reel" : ((item.categories || [])[0] || "") }),
             isVideo && item.duration ? el("span", { class: "lab-card__time", html: ICONS.clock }, item.duration) : null
           ),
           isVideo ? el("span", { class: "lab-card__play", html: ICONS.play }) : el("span", { class: "lab-card__zoom", html: ICONS.zoom }),
@@ -379,10 +412,12 @@
     const renderRail = (posts) => {
       if (!rail || !posts.length) return;
       rail.replaceChildren(...posts.map((item, n) => {
-        const card = el("button", { class: "post-card", type: "button" },
+        const isReel = item.aspect === "9:16";
+        const card = el("button", { class: `post-card${isReel ? " post-card--reel" : ""}`, type: "button" },
           el("div", { class: "post-card__media" },
             el("img", { src: item.poster || item.src, alt: "", loading: "lazy", decoding: "async" }),
             el("video", { muted: true, loop: true, playsinline: true, preload: "none" }),
+            isReel ? el("span", { class: "post-card__badge mono", text: "9:16" }) : null,
             el("span", { class: "lab-card__play", html: ICONS.play })
           ),
           el("div", { class: "post-card__meta" },
@@ -469,6 +504,17 @@
         });
         renderGrid(items);
         renderRail(items.filter((i) => i.id.startsWith("x-")));
+
+        // Open deep-linked item if URL hash is #lab=<id>
+        const checkDeepLink = () => {
+          const m = window.location.hash.match(/^#lab=(.+)$/);
+          if (!m) return;
+          const targetId = decodeURIComponent(m[1]);
+          const idx = items.findIndex((i) => i.id === targetId);
+          if (idx !== -1) openTheater(items, idx, $("#lab"));
+        };
+        checkDeepLink();
+        window.addEventListener("hashchange", checkDeepLink);
       })
       .catch(() => {
         $("#lab-empty").hidden = false;
@@ -528,15 +574,6 @@
   }
 
   // Copy email
-  const toast = $(".toast");
-  let toastTimer = 0;
-  const showToast = (msg) => {
-    if (!toast) return;
-    toast.textContent = msg;
-    toast.classList.add("is-on");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("is-on"), 2000);
-  };
   $$("[data-copy]").forEach((btn) => btn.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(btn.dataset.copy);

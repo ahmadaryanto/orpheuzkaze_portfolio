@@ -1,5 +1,5 @@
 {
-  "_readme": "AI Creative Lab gallery. To add work: put videos in assets/lab/videos/ and images in assets/lab/images/ (optional poster images in assets/lab/posters/), then add an entry to `items`. categories: any of \"AI Videos\", \"Animation\", \"AI Art\", \"Experiments\". type: \"video\" or \"image\". Optional fields: poster, tools, link, linkLabel, duration, language, featured. Leave unknown fields out; they are hidden, never guessed.",
+  "_readme": "AI Creative Lab gallery. To add work: put videos in assets/lab/videos/ and images in assets/lab/images/ (optional poster images in assets/lab/posters/), then add an entry to `items`. categories: any of \"AI Videos\", \"Animation\", \"AI Art\", \"Experiments\". type: \"video\" or \"image\". Optional fields: poster, aspect (\"16:9\" | \"9:16\" | \"1:1\"), tools, link, linkLabel, duration, language, featured. Leave unknown fields out; they are hidden, never guessed.",
   "items": [
     {
       "id": "x-blur-blast",
@@ -11,9 +11,132 @@
       "src": "./assets/lab/videos/x-blur-blast.mp4",
       "poster": "./assets/lab/posters/x-blur-blast.webp",
       "description": "A game-style recap of Blur and Blast: $2.3B deposited before the chain was even live, the points-fuelled boom, a $62M exploit, and TVL down 97% from the peak. Two products that ran on rewards, and went quiet when the rewards stopped.",
+      "tools": [
+        "Remotion",
+        "TypeScript",
+        "ElevenLabs"
+      ],
       "duration": "2:25",
       "language": "English",
       "featured": true
+    },
+    {
+      "id": "x-cat-rubik-promo",
+      "type": "video",
+      "title": "3D Mascot Rubik Film: The Unsolvable Cube",
+      "categories": [
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/x-cat-rubik-promo.mp4",
+      "poster": "./assets/lab/posters/x-cat-rubik-promo.webp",
+      "description": "A 3D toy-style mascot short built with headless Blender 4.5, GSAP motion planning, and Remotion: a talking chat-bubble intro, physically lit 3D Rubik's cube choreography, procedural SFX, and a voice-cloned call-to-action.",
+      "tools": [
+        "Blender 4.5",
+        "GSAP",
+        "Remotion"
+      ],
+      "duration": "0:38",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-google-transformer",
+      "type": "video",
+      "title": "How Google Invented the 'T' in ChatGPT",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-google-transformer.mp4",
+      "poster": "./assets/lab/posters/x-google-transformer.webp",
+      "description": "A 7-scene cinematic 2D stickman documentary on the 2017 'Attention Is All You Need' paper: why RNNs hit a wall, how 8 Google Brain researchers invented the Transformer, and the irony of OpenAI turning Google's open-source breakthrough into ChatGPT.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "2:44",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-sbf-anthropic",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "SBF's $500M Anthropic Bet",
+      "categories": [
+        "Animation",
+        "AI Videos"
+      ],
+      "src": "./assets/lab/videos/x-sbf-anthropic.mp4",
+      "poster": "./assets/lab/posters/x-sbf-anthropic.webp",
+      "description": "In 2021, Sam Bankman-Fried wired $500M from Alameda Research into a little-known AI lab called Anthropic. After FTX collapsed, that single stake became worth $1.4B—enough to help make FTX creditors whole.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:48",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-openai-origin",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "OpenAI: From Non-Profit to $150B Giant",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-openai-origin.mp4",
+      "poster": "./assets/lab/posters/x-openai-origin.webp",
+      "description": "A 9-scene vertical documentary tracing OpenAI from its December 2015 non-profit founding dinner, the Dota 2 OpenAI Five milestone, and the 2019 capped-profit pivot to Microsoft's multi-billion dollar compute alliance.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:45",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "plane-toilet-3d",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "How Airplane Vacuum Toilets Actually Work",
+      "categories": [
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/plane-toilet-3d.mp4",
+      "poster": "./assets/lab/posters/plane-toilet-3d.webp",
+      "description": "A procedural 3D cutaway explainer rendered in headless Blender 4.5 Cycles/EEVEE and edited in Remotion: how James Kemper's 1975 vacuum valve uses cabin-to-sky pressure differential instead of heavy water pumps at 35,000 feet.",
+      "tools": [
+        "Blender 4.5",
+        "Python",
+        "Remotion"
+      ],
+      "duration": "1:09",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-claude-ai-tips",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "6 Claude AI Prompting Rules That Actually Work",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-claude-ai-tips.mp4",
+      "poster": "./assets/lab/posters/x-claude-ai-tips.webp",
+      "description": "A fast-paced vertical reel breaking down 6 practical prompting techniques for Claude: explain-like-I'm-10 framing, role assignment, ask-before-answering, structured output formats, and interactive Artifacts.",
+      "tools": [
+        "Remotion",
+        "Claude Code",
+        "ElevenLabs"
+      ],
+      "duration": "1:01",
+      "language": "Bahasa Indonesia"
     },
     {
       "id": "x-grokbot-intro",

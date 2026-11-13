@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
     <link rel="preload" as="image" href="./assets/profile-picture.webp" imagesrcset="./assets/profile-picture-480.webp 480w, ./assets/profile-picture.webp 880w" imagesizes="(max-width: 900px) 300px, 440px" fetchpriority="high" />
-    <link rel="stylesheet" href="./portfolio.css?v=20261014-2" />
+    <link rel="stylesheet" href="./portfolio.css?v=20261114-1" />
     <script>document.documentElement.classList.add("js");</script>
     <script type="application/ld+json">
       {
@@ -57,11 +57,11 @@
             "alternateName": "orpheuskaze",
             "url": "https://orpheuzkaze-portfolio.vercel.app/",
             "image": "https://orpheuzkaze-portfolio.vercel.app/assets/profile-picture.webp",
-            "jobTitle": "Web3 Growth, Community & Partnerships Specialist",
+            "jobTitle": ["Web3 Growth Manager", "Community & Partnerships Specialist", "AI & Programmatic Video Producer"],
             "description": "Web3 growth, community, moderation, and partnerships specialist with an AI creative edge. Based in Indonesia, open to freelance.",
             "address": { "@type": "PostalAddress", "addressCountry": "ID" },
             "knowsLanguage": ["en", "id"],
-            "knowsAbout": ["Web3 growth", "Community management", "Partnerships", "KOL marketing", "Discord moderation", "AI video", "AI agents"],
+            "knowsAbout": ["Web3 growth", "Community management", "Partnerships", "KOL marketing", "Discord moderation", "AI video", "Remotion", "Blender 3D", "AI agents"],
             "email": "mailto:orpheuzkaze@gmail.com",
             "sameAs": ["https://x.com/orpheuskaze", "https://t.me/orpheuzkaze", "https://github.com/ahmadaryanto"]
           },
@@ -903,6 +903,39 @@
                 </div>
               </div>
             </article>
+
+            <article class="repo-card" data-reveal>
+              <a class="repo-card__media" href="#lab=x-cat-rubik-promo" aria-label="Open Remotion & 3D Motion Studio in AI Lab" data-preview="./assets/projects/remotion-studio-demo.mp4">
+                <img src="./assets/projects/remotion-studio.webp" alt="remotion-studio: programmatic 2D stickman documentaries and headless Blender 4.5 3D reels" width="1280" height="720" loading="lazy" decoding="async" />
+                <span class="repo-card__live mono"><span class="pulse"></span> Motion preview</span>
+              </a>
+              <div class="repo-card__body">
+                <div class="repo-card__head">
+                  <h3>remotion-studio</h3>
+                  <span class="repo-card__tag mono">Video engine</span>
+                </div>
+                <p>
+                  A 26-project programmatic video workspace combining TypeScript/Remotion,
+                  headless Blender 4.5, GSAP motion planning, and ElevenLabs voice-clone sync to
+                  produce 2D stickman documentaries, 3D cutaway reels, and mascot films.
+                </p>
+                <div class="langbar" role="img" aria-label="TypeScript 78.4%, Python 16.2%, CSS 5.4%">
+                  <span style="--w:78.4%;--c:#3178c6"></span><span style="--w:16.2%;--c:#3572A5"></span><span style="--w:5.4%;--c:#a46cf0"></span>
+                </div>
+                <ul class="langs mono">
+                  <li style="--c:#3178c6">TypeScript 78.4%</li>
+                  <li style="--c:#3572A5">Python (Blender) 16.2%</li>
+                  <li style="--c:#a46cf0">CSS 5.4%</li>
+                </ul>
+                <div class="repo-card__links">
+                  <a class="btn btn--primary btn--sm" href="#lab">
+                    Watch in AI Lab
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                  <a class="btn btn--ghost btn--sm" href="#lab=x-cat-rubik-promo">3D Rubik reel</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -910,6 +943,46 @@
       <!-- ============ 09 · CONTACT ============ -->
       <section class="section contact" id="contact">
         <div class="wrap">
+          <div class="offerings">
+            <header class="section__head" data-reveal>
+              <span class="section__index">09</span>
+              <p class="eyebrow">Freelance &amp; Advisory</p>
+              <h2 class="section__title">Ways we can <em>work together.</em></h2>
+            </header>
+            <div class="offerings__grid">
+              <article class="offering" data-reveal>
+                <span class="offering__num mono">01 · Growth &amp; Community</span>
+                <h3>Ecosystem Traction &amp; Collabs</h3>
+                <p>End-to-end community operations, Discord architecture, pre/post-TGE partnership pipelines, KOL activations, Spaces/AMAs, and zero-FUD campaign execution.</p>
+                <ul class="chips-row">
+                  <li>Community Ops</li>
+                  <li>KOL &amp; Partner Deals</li>
+                  <li>GTM &amp; Launches</li>
+                </ul>
+              </article>
+              <article class="offering offering--hl" data-reveal>
+                <span class="offering__num mono">02 · AI &amp; Motion Studio</span>
+                <h3>Programmatic &amp; 3D Launch Videos</h3>
+                <p>Custom 2D stickman documentaries, headless Blender 4.5 3D explainers, and fast-paced narrative reels engineered in Remotion to make complex protocols click on X.</p>
+                <ul class="chips-row">
+                  <li class="is-tool">Remotion</li>
+                  <li class="is-tool">Blender 4.5</li>
+                  <li class="is-tool">ElevenLabs</li>
+                </ul>
+              </article>
+              <article class="offering" data-reveal>
+                <span class="offering__num mono">03 · Agentic Workflows</span>
+                <h3>Custom AI Agents &amp; Automation</h3>
+                <p>Tailored AI agent setups (OpenClaw, Hermes, Claude Code skills) and automated research-to-content workflows that multiply a lean Web3 team's daily output.</p>
+                <ul class="chips-row">
+                  <li>Agentic Pipelines</li>
+                  <li>Content Systems</li>
+                  <li>Custom Skills</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
           <div class="contact__box">
             <p class="eyebrow" data-reveal>Let's stay in touch</p>
             <h2 class="contact__title" data-reveal>
@@ -984,6 +1057,6 @@
     </footer>
 
     <div class="toast" role="status" aria-live="polite"></div>
-    <script src="./portfolio.js?v=20261014-2" defer></script>
+    <script src="./portfolio.js?v=20261114-1" defer></script>
   </body>
 </html>
