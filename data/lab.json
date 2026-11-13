@@ -40,6 +40,24 @@
       "language": "Bahasa Indonesia"
     },
     {
+      "id": "fps-ruined-hall",
+      "type": "video",
+      "title": "3D FPS Tactical Drone Showcase: Ruined Hall",
+      "categories": [
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/fps-ruined-hall.mp4",
+      "poster": "./assets/lab/posters/fps-ruined-hall.webp",
+      "description": "A procedural 3D first-person tactical showcase: tracking autonomous quadcopter drones through sunlit ancient stone ruins with custom HUD telemetry, scope optics, and camera recoil choreography.",
+      "tools": [
+        "Blender 3D",
+        "Procedural",
+        "3D Camera Rig"
+      ],
+      "duration": "0:20"
+    },
+    {
       "id": "x-google-transformer",
       "type": "video",
       "title": "How Google Invented the 'T' in ChatGPT",
@@ -354,6 +372,715 @@
       "poster": "./assets/lab/posters/apa-itu-nft.webp",
       "description": "A beginner's guide to NFTs in Bahasa Indonesia: fungible vs. non-fungible, NFTs as unique digital certificates on the blockchain, what they're used for, and how mint, wallet, trade, and on-chain records fit together.",
       "duration": "2:48",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-jensen-huang-cat",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Jensen Huang & Taruhan Terbesar NVIDIA (3D Mascot Edition)",
+      "categories": [
+        "AI Videos",
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/x-jensen-huang-cat.mp4",
+      "poster": "./assets/lab/posters/x-jensen-huang-cat.webp",
+      "description": "How Jensen Huang nearly went bankrupt in 1996 before betting NVIDIA's future on CUDA and AI compute—narrated with a 3D toy mascot intro and cinematic documentary scenes.",
+      "tools": [
+        "Blender 3D",
+        "Remotion",
+        "ElevenLabs"
+      ],
+      "duration": "2:08",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-cli-vs-chat-cat",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "AI Chat vs. CLI Agent: Bedanya Apa? (Bersama Rubik)",
+      "categories": [
+        "AI Videos",
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/x-cli-vs-chat-cat.mp4",
+      "poster": "./assets/lab/posters/x-cli-vs-chat-cat.webp",
+      "description": "Why browser AI chat only gives advice while a CLI coding agent goes straight into your folders to edit files, run commands, and ship projects—hosted by the 3D Rubik cat mascot.",
+      "tools": [
+        "Blender 3D",
+        "Remotion",
+        "Claude Code"
+      ],
+      "duration": "1:34",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-claude-codex-awam",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Claude Code & Codex Buat Orang Awam: Bikin App Tanpa Jago Koding",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-claude-codex-awam.mp4",
+      "poster": "./assets/lab/posters/x-claude-codex-awam.webp",
+      "description": "A complete beginner's guide to building real apps, websites, and automations using Claude Code and OpenAI Codex—even if you've never written code from scratch.",
+      "tools": [
+        "Blender 3D",
+        "Remotion",
+        "Claude Code"
+      ],
+      "duration": "3:19",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-berontak",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Gimana Kalau AI Berontak? Fiksi vs. Realita",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-berontak.mp4",
+      "poster": "./assets/lab/posters/x-ai-berontak.webp",
+      "description": "A 3-minute stickman documentary separating Hollywood sci-fi rebellion tropes from how modern AI alignment, reward hacking, and autonomous agent risks actually work in reality.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "3:00",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-apa-itu-llm",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Apa Itu LLM? Cara Kerja Otak di Balik AI",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-apa-itu-llm.mp4",
+      "poster": "./assets/lab/posters/x-apa-itu-llm.webp",
+      "description": "An illustrated stickman explainer on Large Language Models: how next-token prediction, massive training corpora, and pattern recognition let AI write, reason, and code.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:35",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-apa-itu-token-ai",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Apa Itu Token di AI? Cara AI Membaca Kata",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-apa-itu-token-ai.mp4",
+      "poster": "./assets/lab/posters/x-apa-itu-token-ai.webp",
+      "description": "Why AI doesn't read whole words like humans do: how text is sliced into sub-word tokens, translated into numerical IDs, and priced by context window usage.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:34",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-ep1-halusinasi",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Seri AI Ep. 1: Kenapa AI Bisa Halusinasi?",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-ep1-halusinasi.mp4",
+      "poster": "./assets/lab/posters/x-ai-ep1-halusinasi.webp",
+      "description": "Episode 1 of the Stickman AI Series: why language models confidently make up fake facts when predicting probable words without a grounding source.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "1:31",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-ep2-prompt",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Seri AI Ep. 2: Cara Prompting Biar AI Nggak Ngawur",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-ep2-prompt.mp4",
+      "poster": "./assets/lab/posters/x-ai-ep2-prompt.webp",
+      "description": "Episode 2 of the Stickman AI Series: practical context, constraints, and verification habits that drastically reduce AI hallucinations in daily work.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "1:21",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-ep3-agent",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Seri AI Ep. 3: Bedanya Chatbot Biasa vs. AI Agent",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-ep3-agent.mp4",
+      "poster": "./assets/lab/posters/x-ai-ep3-agent.webp",
+      "description": "Episode 3 of the Stickman AI Series: how tool use, memory, and multi-step planning turn a passive text chatbot into an autonomous AI agent.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "1:24",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-open-source-lego",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Apa Itu Open Source? Ibarat Main Lego Bareng",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-open-source-lego.mp4",
+      "poster": "./assets/lab/posters/x-open-source-lego.webp",
+      "description": "A bite-sized visual analogy explaining open-source software as a shared Lego blueprint that anyone in the world can inspect, remix, and improve together.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "0:34",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-gpl-vs-mit",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Lisensi MIT vs. GPL: Dua Resep Gratis, Beda Aturan",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-gpl-vs-mit.mp4",
+      "poster": "./assets/lab/posters/x-gpl-vs-mit.webp",
+      "description": "Comparing permissive MIT licensing vs. copyleft GPL licensing through a kitchen recipe analogy: what you can close-source and what must stay open.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "0:32",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-flappybird-story",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Flappy Bird (2013): Game $50K/Hari yang Dihapus Penciptanya",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-flappybird-story.mp4",
+      "poster": "./assets/lab/posters/x-flappybird-story.webp",
+      "description": "How Dong Nguyen built Flappy Bird in a single weekend in Hanoi, watched it hit #1 globally earning $50,000/day in ad revenue, and deleted it from the App Store out of guilt.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:20",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-simsimi-story",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Sejarah SimSimi (2002): Chatbot Kuning Pelopor Era AI",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-simsimi-story.mp4",
+      "poster": "./assets/lab/posters/x-simsimi-story.webp",
+      "description": "Long before ChatGPT, a quirky yellow Korean chatbot launched in 2002 learned slang directly from millions of users—showing both the magic and chaos of crowd-trained chat.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:28",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-vevo-story",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Kenapa Hampir Semua Video Musik di YouTube Ada Nama VEVO?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-vevo-story.mp4",
+      "poster": "./assets/lab/posters/x-vevo-story.webp",
+      "description": "Why Universal, Sony, and EMI teamed up in December 2008 to create VEVO rather than suing YouTube—turning music videos into an ad-revenue powerhouse.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:44",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ps1-black-disc",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Misteri Kaset PS1 Warna Hitam ke Era Pre-Order Digital",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ps1-black-disc.mp4",
+      "poster": "./assets/lab/posters/x-ps1-black-disc.webp",
+      "description": "Why original PlayStation 1 discs were dyed jet-black, how physical game distribution evolved into digital pre-orders, and why gamers used to buy finished discs on day one.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig",
+        "ElevenLabs"
+      ],
+      "duration": "1:05",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-orpheuskaze-intro",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Player Select: Kenalin Jeffry (@orpheuskaze)",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-orpheuskaze-intro.mp4",
+      "poster": "./assets/lab/posters/x-orpheuskaze-intro.webp",
+      "description": "An arcade character-select intro to @orpheuskaze: bridging Indonesian and English crypto/AI communities through clear storytelling, animated explainers, and hands-on builders' guides.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:09",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-alan-turing",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Dari Mesin Babbage 1837 ke Alan Turing & Komputer Modern",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-alan-turing.mp4",
+      "poster": "./assets/lab/posters/x-alan-turing.webp",
+      "description": "Tracing the lineage of modern computing from Charles Babbage's 1837 Analytical Engine and Ada Lovelace to Alan Turing's 1936 universal machine and wartime codebreaking.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "2:01",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-tier-list",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Tier List AI Kalau Diajak Nongkrong & Bercanda",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-tier-list.mp4",
+      "poster": "./assets/lab/posters/x-ai-tier-list.webp",
+      "description": "Ranking major AI assistants (ChatGPT, Claude, Grok, Gemini, DeepSeek, Perplexity) by personality, humor, and vibe if you invited them to hang out at a coffee shop.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "0:43",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-agents-battle",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "4 AI Agents Battle: Meta Muse, Grok Bot, OpenAI & Claude",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-agents-battle.mp4",
+      "poster": "./assets/lab/posters/x-agents-battle.webp",
+      "description": "A head-to-head breakdown of four major AI agent ecosystems competing to automate workflows, browse the web, and execute complex multi-step tasks.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:03",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-ai-bikin-bodoh",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Apakah AI Bikin Kita Pelupa? Dari Plato 370 SM ke Riset MIT",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-ai-bikin-bodoh.mp4",
+      "poster": "./assets/lab/posters/x-ai-bikin-bodoh.webp",
+      "description": "Socrates once warned that writing would weaken human memory. Here is what modern cognitive research says about offloading thinking to AI—and how to use AI without losing sharpness.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:01",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-motion-prompt",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Clickable Motion Dictionary: 120 Gerakan Gratis Buat Prompt AI",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-motion-prompt.mp4",
+      "poster": "./assets/lab/posters/x-motion-prompt.webp",
+      "description": "Stop prompting 'make a cool animation'—how to use an interactive dictionary of 120 named motion primitives so coding LLMs generate exact UI and video choreography.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:00",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-agentic-wallet",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Binance Agentic Wallet: Saat AI Punya Dompet Sendiri",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-agentic-wallet.mp4",
+      "poster": "./assets/lab/posters/x-agentic-wallet.webp",
+      "description": "How on-chain agentic wallets allow AI agents to hold funds, sign programmatic transactions under strict guardrails, and interact with DeFi protocols autonomously.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "2:05",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-grok-bankr-nft",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "AI Heist Series: Ketika Grok & Bankr Punya Wallet On-Chain",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-grok-bankr-nft.mp4",
+      "poster": "./assets/lab/posters/x-grok-bankr-nft.webp",
+      "description": "A story-driven breakdown of what happens when social AI bots on X are connected to live on-chain wallets via Bankr—and how users try to social-engineer them.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:29",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-sahil-founder",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Sahil Arora: Bubblemaps On-Chain Investigation (~$5M)",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-sahil-founder.mp4",
+      "poster": "./assets/lab/posters/x-sahil-founder.webp",
+      "description": "An English investigative breakdown of Bubblemaps' on-chain cluster analysis tracing celebrity memecoin launches and wallet outflows across Solana.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:15",
+      "language": "English"
+    },
+    {
+      "id": "x-pocketpad",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Meet Pocket (@pocketpad_io): Web3 Gaming & Wallet Companion",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-pocketpad.mp4",
+      "poster": "./assets/lab/posters/x-pocketpad.webp",
+      "description": "An English product showcase introducing Pocket (@pocketpad_io), an early-alpha consumer and gaming companion designed to make on-chain interactions feel effortless.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:11",
+      "language": "English"
+    },
+    {
+      "id": "x-expro-universe",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Dari Juara Dota 2 TI5 (UNiVeRsE) Jadi AI Developer",
+      "categories": [
+        "AI Videos",
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-expro-universe.mp4",
+      "poster": "./assets/lab/posters/x-expro-universe.webp",
+      "description": "How Saahil 'UNiVeRsE' Arora—author of the famous $6 Million Echo Slam at The International 2015—retired from pro Dota 2 and reinvented himself as a software & AI builder.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:18",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-akke-dev",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Ex-Pro Dota 2 ke Developer Part 2: Joakim 'Akke' Akterhall",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-akke-dev.mp4",
+      "poster": "./assets/lab/posters/x-akke-dev.webp",
+      "description": "Part 2 of the Ex-Pro to Developer series: how TI3 champion Joakim 'Akke' Akterhall balanced competitive esports with a computer science degree and game studio career.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:23",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-cz-binance",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Kisah Changpeng Zhao (CZ): Dari Jiangsu 1977 ke Binance",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-cz-binance.mp4",
+      "poster": "./assets/lab/posters/x-cz-binance.webp",
+      "description": "The biography of Changpeng Zhao (CZ): immigrating to Vancouver, flipping burgers at McDonald's, building high-frequency trading systems, selling his apartment for Bitcoin, and launching Binance.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:19",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-davinci-bitcoin",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Davinci Jeremie (Mei 2013): Video 'Beli $1 Bitcoin' Saat $116",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-davinci-bitcoin.mp4",
+      "poster": "./assets/lab/posters/x-davinci-bitcoin.webp",
+      "description": "Looking back at Davinci Jeremie's iconic May 2013 YouTube plea urging viewers to spend just $1 on a lottery ticket called Bitcoin when BTC traded at $116.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:32",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-indodax-oscar",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Oscar Darmawan: Dari Pondok Media Semarang 2007 ke Indodax",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-indodax-oscar.mp4",
+      "poster": "./assets/lab/posters/x-indodax-oscar.webp",
+      "description": "How Oscar Darmawan started from a modest web agency in Semarang in 2007 to co-founding Bitcoin.co.id (now Indodax), Indonesia's earliest crypto exchange.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:30",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-crypto-careers",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Crypto Bukan Cuma Trading: 6 Pintu Karier & Ekosistem Web3",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-crypto-careers.mp4",
+      "poster": "./assets/lab/posters/x-crypto-careers.webp",
+      "description": "Why crypto is much wider than price charts: exploring stablecoin payments ($302B+), developer tooling, research, content creation, community ops, and non-trading Web3 roles.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:21",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-memecoin-stickman",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Kenapa Koin Meme Bisa Naik Cuma Karena Komunitas & Hype?",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-memecoin-stickman.mp4",
+      "poster": "./assets/lab/posters/x-memecoin-stickman.webp",
+      "description": "A stickman breakdown of attention economics in memecoins: how social coordination, liquidity depth, and narrative velocity drive price—and why late entrants bear the risk.",
+      "tools": [
+        "Remotion",
+        "Stickman Rig"
+      ],
+      "duration": "1:00",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-trenching-journey",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Series Memecoin Part 1: Perjalanan Trenching di On-Chain",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-trenching-journey.mp4",
+      "poster": "./assets/lab/posters/x-trenching-journey.webp",
+      "description": "Part 1 of the on-chain memecoin series: lessons learned from the trenches, tracking wallet flows, managing position sizing, and surviving high-volatility cycles.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "0:57",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-msci-index",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "IDX & MSCI Indonesia: Reformasi Pasar & Arus Modal Global",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-msci-index.mp4",
+      "poster": "./assets/lab/posters/x-msci-index.webp",
+      "description": "An explainer on how MSCI global index weightings work, why foreign institutional capital tracks them, and what Indonesia Stock Exchange (IDX) reforms mean for investors.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:21",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-digibank-cyber",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "214.000 Aktivitas Ancaman Siber: Deteksi vs. Pembobolan",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-digibank-cyber.mp4",
+      "poster": "./assets/lab/posters/x-digibank-cyber.webp",
+      "description": "Clarifying cybersecurity telemetry in digital banking: the difference between 214,000 automated threat detections blocked at the perimeter vs. an actual data breach.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:28",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-oct-security",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Semua Dimulai dari PHP: Sejarah Web & Keamanan Aplikasi",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-oct-security.mp4",
+      "poster": "./assets/lab/posters/x-oct-security.webp",
+      "description": "From Rasmus Lerdorf's 1994 Personal Home Page scripts to modern web security: how early dynamic websites worked and why input validation still matters today.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:15",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-bridgeplay",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Bridgeplay: Main Game Windows di Steam Mac secara Open-Source",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-bridgeplay.mp4",
+      "poster": "./assets/lab/posters/x-bridgeplay.webp",
+      "description": "How open-source translation layers let Apple Silicon Mac users run Windows-only Steam games smoothly without dual-booting or paying for heavyweight VMs.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:12",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-vibeyourtv",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "VibeYourTV (CleanYourTV): Sulap Android TV Jadi Bersih",
+      "categories": [
+        "Animation",
+        "Experiments"
+      ],
+      "src": "./assets/lab/videos/x-vibeyourtv.mp4",
+      "poster": "./assets/lab/posters/x-vibeyourtv.webp",
+      "description": "How to replace cluttered, ad-heavy smart TV home screens with a minimal, distraction-free launcher experience inspired by Apple TV.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:00",
+      "language": "Bahasa Indonesia"
+    },
+    {
+      "id": "x-revo-aot",
+      "type": "video",
+      "aspect": "9:16",
+      "title": "Revo (Linked Horizon): Sosok di Balik Lagu Attack on Titan",
+      "categories": [
+        "Animation"
+      ],
+      "src": "./assets/lab/videos/x-revo-aot.mp4",
+      "poster": "./assets/lab/posters/x-revo-aot.webp",
+      "description": "The story of Japanese composer Revo (Sound Horizon / Linked Horizon) and how he crafted the symphonic rock anthems that defined Attack on Titan.",
+      "tools": [
+        "Remotion"
+      ],
+      "duration": "1:18",
       "language": "Bahasa Indonesia"
     },
     {
